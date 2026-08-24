@@ -135,39 +135,39 @@
   const amenityData = {
    'adventure': {
     title: 'Adventure Play Zone',
-    img: './assets/images/adventure.jpg.jpeg'
+    img: './assets/images/adventure.webp'
   },
   'archery': {
     title: 'Archery & Precision Zone',
-    img: './assets/images/archery.jpg.jpeg'
+    img: './assets/images/archery.webp'
   },
   'basketball': {
     title: 'Basketball Court',
-    img: './assets/images/basketball-court.jpg.jpeg'
+    img: './assets/images/basketball-court.webp'
   },
   'cafe': {
     title: 'Clubhouse Cafe & Community Lounge',
-    img: './assets/images/cafe.jpg.jpeg'
+    img: './assets/images/cafe.webp'
   },
   'foosball': {
     title: 'Foosball & Indoor Games Deck',
-    img: './assets/images/foosball.jpg.jpeg'
+    img: './assets/images/foosball.webp'
   },
   'forest': {
     title: 'Miyawaki Forest Zone',
-    img: './assets/images/miyawaki-forest.jpg.jpeg'
+    img: './assets/images/miyawaki-forest.webp'
   },
   'climbing': {
     title: 'Rock Climbing Wall',
-    img: './assets/images/rock-climbing.jpg.jpeg'
+    img: './assets/images/rock-climbing.jpg'
   },
   'senior': {
     title: 'Senior Citizens Relaxation Zone',
-    img: './assets/images/senior-citizen-zone.jpg.jpeg'
+    img: './assets/images/senior-citizen-zone.jpg'
   },
   'swimming': {
     title: 'Temperature Controlled Swimming Pool',
-    img: './assets/images/swimming-pool.jpg.jpeg'
+    img: './assets/images/swimming-pool.jpg'
   }
   };
 
