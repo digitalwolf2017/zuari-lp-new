@@ -7,14 +7,12 @@
   <title>Zuari</title>
   <meta name="description" content="Zuari - Your trusted partner for quality products and services.">
 
-  <!-- Resource hints for faster third-party connections -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://images.unsplash.com">
   <link rel="preconnect" href="https://unpkg.com" crossorigin>
   <link rel="dns-prefetch" href="https://commondatastorage.googleapis.com">
 
-  <!-- Fonts: non-blocking, loaded with swap -->
   <link rel="preload" as="style"
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap">
   <link rel="stylesheet"
@@ -32,221 +30,222 @@
 <body>
 
   <!-- HERO SECTION -->
-  <section
-    class="relative min-h-screen flex flex-col text-slate-800 font-sans py-6 md:py-10 px-4 sm:px-6 lg:px-12 overflow-hidden bg-slate-50">
+  <section id="home"
+    class="relative min-h-screen flex flex-col text-slate-800 font-sans py-0 md:py-10 px-4 sm:px-6 lg:px-12 pt-3 md:pt-10 overflow-hidden bg-slate-50">
 
-    <!-- REAL BACKGROUND AERIAL IMAGE OVERLAY -->
-    <div class="absolute inset-0 z-0 lg:m-8 m-0 rounded-2xl">
+    <div class="absolute inset-0 z-0 lg:m-8 m-0 rounded-xl hidden md:block">
       <img src="./assets/images/bg-aerial-opt.webp" alt="Zuari Kinetix Aerial Site Layout" fetchpriority="high"
         decoding="async" class="w-full h-full object-cover object-top md:object-center" />
-      <!-- Light Radial/Linear Gradient Overlay to match design clarity -->
-      <!-- <div class="absolute inset-0 bg-white/70 md:bg-white/60 backdrop-blur-[1px]"></div> -->
+
+      <div class="absolute inset-0 bg-linear-to-b from-white/80 via-transparent via-10% to-transparent"></div>
     </div>
 
     <div class="container mx-auto relative z-10 flex flex-col flex-1">
 
-      <!-- HEADER / NAVIGATION SECTION WITH AOS ANIMATION -->
-      <header class="flex items-center justify-between md:justify-end mb-6 md:mb-10" data-aos="fade-down"
+      <header class="flex items-center justify-between mb-4 md:mb-10 w-full" data-aos="fade-down"
         data-aos-duration="800">
-        <!-- Project Logo Asset -->
-        <div class="w-36 sm:w-48 md:w-56 md:mt-4">
-          <img src="./assets/images/logo.png" alt="Zuari KinetiX Logo" data-eager decoding="async"
-            class="w-full h-auto object-contain" />
+
+        <div class="w-32 sm:w-48 md:w-56">
+          <a href="#home">
+            <img src="./assets/images/logo.png" alt="Zuari KinetiX Logo" data-eager decoding="async"
+              class="w-full h-auto object-contain" />
+          </a>
         </div>
 
-        <!-- House of KK Birla Branding -->
-        <div class="text-right block md:hidden">
-        <span class="text-xs sm:text-sm text-slate-600 font-medium block">From The House Of</span>
-        <span class="text-lg sm:text-2xl md:text-3xl font-extrabold text-[#0052CC] tracking-tight">KK Birla</span>
-      </div>
+
+
+        <div class="text-right flex items-center justify-end">
+          <button onclick="openSideMenu()"
+            class="text-[#0052CC] hover:text-[#003d99] focus:outline-none transition-colors">
+            <svg class="w-8 h-8 sm:w-10 sm:h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16">
+              </path>
+            </svg>
+          </button>
+        </div>
       </header>
 
-      <!-- MAIN HERO CONTENT GRID -->
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 xl:gap-12 items-center lg:content-center flex-1">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center flex-1 pb-4">
 
-        <!-- LEFT COLUMN: TITLES, BADGES & 6 FEATURE CARDS WITH ICONS -->
-        <div class="lg:col-span-8 space-y-5" data-aos="fade-right" data-aos-duration="900" data-aos-delay="150">
+        <div class="lg:col-span-8 space-y-0 md:space-y-4 my-auto relative z-10" data-aos="fade-right"
+          data-aos-duration="900" data-aos-delay="150">
 
-          <!-- Title & Subtitle -->
-          <div>
-            <h1 class="text-2xl sm:text-4xl lg:text-5xl font-semibold text-slate-900 leading-tight">
-              Premium Villa Plot in <span class="text-[#0052CC]">North Bangalore</span>
-            </h1>
-            <p class="mt-2 text-xs sm:text-sm md:text-base font-semibold text-slate-700 max-w-xl">
-              Premium Plotted Development In Doddaballapura, North Bangalore's Fast-Growing Corridor
-            </p>
-          </div>
-
-          <!-- RERA Info Badges -->
-          <div class="space-y-2">
-            <div
-              class="inline-flex items-center gap-2 bg-[#64748B]/70 backdrop-blur-md text-white border border-slate-400/30 px-3 py-1.5 rounded-md text-[11px] sm:text-xs font-medium shadow-xs">
-              <svg class="w-3.5 h-3.5 text-slate-200 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
-              <span>RERA NO: PRM/KA/RERA/1250/301/PR/170726/008815 https://rera.karnataka.gov.in/</span>
-            </div>
-
-            <div class="block">
-              <div
-                class="inline-flex items-center gap-2 bg-[#64748B]/60 md:bg-blue-100/90 backdrop-blur-md text-white md:text-[#0052CC] border border-slate-400/30 md:border-blue-200 px-3 py-1.5 rounded-md text-[11px] sm:text-xs font-semibold shadow-xs">
-                <svg class="w-3.5 h-3.5 text-emerald-400 md:text-[#0052CC] shrink-0" fill="none" stroke="currentColor"
-                  viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-                </svg>
-                <span>Rera Approved - BMRDA Approved Gated Community</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- 6 FEATURE CARDS GRID (EACH WITH ICON ON MOBILE & DESKTOP) -->
-          <div class="grid grid-cols-3 gap-3 sm:gap-4 pt-3 w-full md:max-w-150">
-
-            <!-- Feature 1 -->
-            <div
-              class="relative bg-[#506375]/80 md:bg-[#506375]/70 backdrop-blur-md border border-white/30 rounded-2xl p-3 pt-6 text-center text-white flex flex-col items-center justify-center min-h-25 md:min-h-31.25 shadow-lg">
-              <div
-                class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 bg-white rounded-full p-1.5 text-[#0052CC] shadow-md border border-blue-100 flex items-center justify-center">
-                <svg class="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <strong class="text-xs sm:text-sm font-semibold leading-snug">1200-2000<br />sqft plots</strong>
-            </div>
-
-            <!-- Feature 2 -->
-            <div
-              class="relative bg-[#506375]/80 md:bg-[#506375]/70 backdrop-blur-md border border-white/30 rounded-2xl p-3 pt-6 text-center text-white flex flex-col items-center justify-center min-h-25 md:min-h-31.25 shadow-lg">
-              <div
-                class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 bg-white rounded-full p-1.5 text-[#0052CC] shadow-md border border-blue-100 flex items-center justify-center">
-                <svg class="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <strong class="text-xs sm:text-sm font-semibold leading-snug">14.85<br />Acres</strong>
-            </div>
-
-            <!-- Feature 3 -->
-            <div
-              class="relative bg-[#506375]/80 md:bg-[#506375]/70 backdrop-blur-md border border-white/30 rounded-2xl p-3 pt-6 text-center text-white flex flex-col items-center justify-center min-h-25 md:min-h-31.25 shadow-lg">
-              <div
-                class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 bg-white rounded-full p-1.5 text-[#0052CC] shadow-md border border-blue-100 flex items-center justify-center">
-                <svg class="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <strong class="text-xs sm:text-sm font-semibold leading-snug">251<br />Plots</strong>
-            </div>
-
-            <!-- Feature 4 -->
-            <div
-              class="relative bg-[#506375]/80 md:bg-[#506375]/70 backdrop-blur-md border border-white/30 rounded-2xl p-3 pt-6 text-center text-white flex flex-col items-center justify-center min-h-25 md:min-h-31.25 shadow-lg">
-              <div
-                class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 bg-white rounded-full p-1.5 text-[#0052CC] shadow-md border border-blue-100 flex items-center justify-center">
-                <svg class="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <strong class="text-xs sm:text-sm font-semibold leading-snug">Starting From<br />75 Lacs</strong>
-            </div>
-
-            <!-- Feature 5 -->
-            <div
-              class="relative bg-[#506375]/80 md:bg-[#506375]/70 backdrop-blur-md border border-white/30 rounded-2xl p-3 pt-6 text-center text-white flex flex-col items-center justify-center min-h-25 md:min-h-31.25 shadow-lg">
-              <div
-                class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 bg-white rounded-full p-1.5 text-[#0052CC] shadow-md border border-blue-100 flex items-center justify-center">
-                <svg class="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <strong class="text-xs sm:text-sm font-semibold leading-snug">Home Loan<br />Available</strong>
-            </div>
-
-            <!-- Feature 6 -->
-            <div
-              class="relative bg-[#506375]/80 md:bg-[#506375]/70 backdrop-blur-md border border-white/30 rounded-2xl p-3 pt-6 text-center text-white flex flex-col items-center justify-center min-h-25 md:min-h-31.25 shadow-lg">
-              <div
-                class="absolute -top-4 left-1/2 -translate-x-1/2 w-8 h-8 md:w-10 md:h-10 bg-white rounded-full p-1.5 text-[#0052CC] shadow-md border border-blue-100 flex items-center justify-center">
-                <svg class="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-              </div>
-              <strong class="text-xs sm:text-sm font-semibold leading-snug">24X7 Security<br />Surveillance</strong>
-            </div>
-
-          </div>
-
-          <!-- YELLOW BOOKING BUTTON (DESKTOP ONLY) -->
           <div
-            class="hidden md:flex items-center justify-between w-full md:max-w-150 bg-[#FFC555] hover:bg-[#ffbe3b] text-slate-900 rounded-xl px-6 py-3.5 font-bold text-sm shadow-md transition-all cursor-pointer">
+            class="relative -mx-4 px-4 pt-12 pb-80 sm:pb-60 md:p-0 md:m-0 space-y-3.5 md:space-y-4 overflow-hidden md:overflow-visible">
+
+            <div class="block md:hidden absolute inset-0 -z-10">
+              <img src="./assets/images/ph-bg.jpg" alt="Hero Mobile Background"
+                class="w-full h-full object-cover object-center" />
+            </div>
+
+            <div class="text-center md:text-left">
+              <h1 class="text-2xl sm:text-4xl lg:text-5xl font-normal text-slate-900 leading-tight">
+                Premium Plots In <span class="text-[#0052CC]">North Bangalore</span>
+              </h1>
+              <p class="mt-2 text-sm sm:text-sm font-normal text-slate-700 max-w-xl hidden md:block">
+                Premium Plotted Development In Doddaballapura, North Bangalore's Fast-Growing Corridor
+              </p>
+
+              <div class="text-center md:text-left mt-2">
+          <span class="text-[13px] text-slate-600 font-normal block leading-tight">From The House Of</span>
+          <span class="text-base font-extrabold text-[#0052CC] tracking-tight">KK Birla</span>
+        </div>
+            </div>
+
+            <div class="space-y-2">
+
+              <div class="block md:hidden text-center">
+                <div
+                  class="inline-flex items-center justify-center bg-[#D0E7FF] text-[#0052CC] px-6 py-4 rounded-lg text-sm font-normal shadow-xs">
+                  Rera & BMRDA Approved Gated Community
+                </div>
+              </div>
+
+              <div class="hidden md:block space-y-2">
+                <div
+                  class="flex md:inline-flex w-full md:w-auto justify-center md:justify-start items-center gap-2 bg-[#506375]/80 md:bg-[#64748B]/70 backdrop-blur-md text-white border border-white/30 px-3.5 py-1.5 rounded-lg text-[14px] sm:text-sm font-normal shadow-xs">
+                  <svg class="w-3.5 h-3.5 text-slate-200 shrink-0" fill="none" stroke="currentColor"
+                    viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                      d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                  </svg>
+                  <span class="text-center md:text-left">RERA NO: PRM/KA/RERA/1250/301/PR/170726/008815
+                    https://rera.karnataka.gov.in/</span>
+                </div>
+
+                <div class="block">
+                  <div
+                    class="flex md:inline-flex w-full md:w-auto justify-center md:justify-start items-center gap-2 bg-[#506375]/80 md:bg-[#64748B]/70 backdrop-blur-md text-white border border-white/30 px-3.5 py-1.5 rounded-lg text-[14px] sm:text-sm font-normal shadow-xs">
+                    <svg class="w-3.5 h-3.5 text-white shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    <span class="text-center md:text-left">Rera Approved - BMRDA Approved Gated Community</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="grid grid-cols-3 gap-x-2.5 sm:gap-x-4 gap-y-8 sm:gap-y-8 pt-6 md:pt-6 w-full max-w-lg mx-auto md:mx-0 md:mb-4">
+
+              <div
+                class="relative bg-[#CBE4FE] md:bg-[#506375]/70 text-[#0052CC] md:text-white border border-blue-200/70 md:border-white/30 backdrop-blur-md rounded-xl p-2 sm:p-3.5 pt-6.5 sm:pt-7 pb-2.5 text-center flex flex-col items-center justify-center min-h-[86px] sm:min-h-20 shadow-md md:shadow-lg">
+                <div
+                  class="absolute -top-5 md:-top-5.5 left-1/2 -translate-x-1/2 w-12 h-12 bg-white rounded-full p-2 md:p-1.5 shadow-sm md:shadow-md border border-blue-200 md:border-blue-100 flex items-center justify-center">
+                  <img src="./assets/images/plots.png" alt="Plots" class="w-full h-full object-contain" />
+                </div>
+                <strong
+                  class="text-[14px] sm:text-[13px] md:text-sm font-normal leading-snug">1200-2000<br />sqft
+                  plots</strong>
+              </div>
+
+              <div
+                class="relative bg-[#CBE4FE] md:bg-[#506375]/70 text-[#0052CC] md:text-white border border-blue-200/70 md:border-white/30 backdrop-blur-md rounded-xl p-2 sm:p-3.5 pt-6.5 sm:pt-7 pb-2.5 text-center flex flex-col items-center justify-center min-h-[86px] sm:min-h-20 shadow-md md:shadow-lg">
+                <div
+                  class="absolute -top-5 md:-top-5.5 left-1/2 -translate-x-1/2 w-12 h-12 bg-white rounded-full p-2 md:p-1.5 shadow-sm md:shadow-md border border-blue-200 md:border-blue-100 flex items-center justify-center">
+                  <img src="./assets/images/acres.png" alt="Acres" class="w-full h-full object-contain" />
+                </div>
+                <strong
+                  class="text-[14px] sm:text-[13px] md:text-sm font-normal leading-snug">14.85<br />Acres</strong>
+              </div>
+
+              <div
+                class="relative bg-[#CBE4FE] md:bg-[#506375]/70 text-[#0052CC] md:text-white border border-blue-200/70 md:border-white/30 backdrop-blur-md rounded-xl p-2 sm:p-3.5 pt-6.5 sm:pt-7 pb-2.5 text-center flex flex-col items-center justify-center min-h-[86px] sm:min-h-20 shadow-md md:shadow-lg">
+                <div
+                  class="absolute -top-5 md:-top-5.5 left-1/2 -translate-x-1/2 w-12 h-12 bg-white rounded-full p-2 md:p-1.5 shadow-sm md:shadow-md border border-blue-200 md:border-blue-100 flex items-center justify-center">
+                  <img src="./assets/images/field-plot.png" alt="Field Plot" class="w-full h-full object-contain" />
+                </div>
+                <strong
+                  class="text-[14px] sm:text-[13px] md:text-sm font-normal leading-snug">251<br />Plots</strong>
+              </div>
+
+              <div
+                class="relative bg-[#CBE4FE] md:bg-[#506375]/70 text-[#0052CC] md:text-white border border-blue-200/70 md:border-white/30 backdrop-blur-md rounded-xl p-2 sm:p-3.5 pt-6.5 sm:pt-7 pb-2.5 text-center flex flex-col items-center justify-center min-h-[86px] sm:min-h-20 shadow-md md:shadow-lg">
+                <div
+                  class="absolute -top-5 md:-top-5.5 left-1/2 -translate-x-1/2 w-12 h-12 bg-white rounded-full p-2 md:p-1.5 shadow-sm md:shadow-md border border-blue-200 md:border-blue-100 flex items-center justify-center">
+                  <img src="./assets/images/starting.png" alt="Starting Price" class="w-full h-full object-contain" />
+                </div>
+                <strong class="text-[14px] sm:text-[13px] md:text-sm font-normal leading-snug">Starting
+                  From<br />75 Lacs</strong>
+              </div>
+
+              <div
+                class="relative bg-[#CBE4FE] md:bg-[#506375]/70 text-[#0052CC] md:text-white border border-blue-200/70 md:border-white/30 backdrop-blur-md rounded-xl p-2 sm:p-3 .5 pt-6.5 sm:pt-7 pb-2.5 text-center flex flex-col items-center justify-center min-h-[86px] sm:min-h-20 shadow-md md:shadow-lg">
+                <div
+                  class="absolute -top-5 md:-top-5.5 left-1/2 -translate-x-1/2 w-12 h-12 bg-white rounded-full p-2 md:p-1.5 shadow-sm md:shadow-md border border-blue-200 md:border-blue-100 flex items-center justify-center">
+                  <img src="./assets/images/home.png" alt="Home Loan" class="w-full h-full object-contain" />
+                </div>
+                <strong class="text-[14px] sm:text-[13px] md:text-sm font-normal leading-snug">Home
+                  Loan<br />Available</strong>
+              </div>
+
+              <div
+                class="relative bg-[#CBE4FE] md:bg-[#506375]/70 text-[#0052CC] md:text-white border border-blue-200/70 md:border-white/30 backdrop-blur-md rounded-xl p-2 sm:p-2.5 pt-6.5 sm:pt-7 pb-2.5 text-center flex flex-col items-center justify-center min-h-[86px] sm:min-h-20 shadow-md md:shadow-lg">
+                <div
+                  class="absolute -top-5 md:-top-5.5 left-1/2 -translate-x-1/2 w-12 h-12 bg-white rounded-full p-2 md:p-1.5 shadow-sm md:shadow-md border border-blue-200 md:border-blue-100 flex items-center justify-center">
+                  <img src="./assets/images/security.png" alt="Security" class="w-full h-full object-contain" />
+                </div>
+                <strong class="text-[14px] sm:text-[13px] md:text-sm font-normal leading-snug">24X7
+                  Security<br />Surveillance</strong>
+              </div>
+
+            </div>
+          </div>
+
+          <div
+            class="hidden md:flex items-center justify-between w-full max-w-lg bg-[#FFC555] hover:bg-[#ffbe3b] text-slate-900 rounded-lg px-6 py-3.5 font-normal text-sm shadow-md transition-all cursor-pointer mt-1">
             <span>Booking Starts From ₹75 lacs</span>
             <svg class="w-6 h-6 stroke-[2.5]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
             </svg>
           </div>
 
+          <div
+            class="block md:hidden bg-[#1E293B] text-white text-[9.5px] py-2 px-3 text-center -mt-4 tracking-tight font-normal -mx-4 w-[calc(100%+2rem)]">
+            RERA NO: PRM/KA/RERA/1250/301/PR/170726/008815 https://rera.karnataka.gov.in/
+          </div>
+
         </div>
 
-        <!-- <div class="lg:col-span-1 md:block hidden">
-
-      </div> -->
-
-        <!-- RIGHT COLUMN: CALLBACK FORM CARD -->
-        <div class="lg:col-span-4 w-full mt-4 lg:mt-0" data-aos="fade-left" data-aos-duration="900"
-          data-aos-delay="300">
-          <div class="bg-white/95 backdrop-blur-md rounded-2xl p-6 md:p-8 shadow-2xl border border-white/60">
+        <div class="lg:col-span-4 w-full max-w-sm lg:ml-auto self-end mt-2 lg:mt-0" data-aos="fade-left"
+          data-aos-duration="900" data-aos-delay="300">
+          <div
+            class="bg-[#EBF1F8] md:bg-white/75 backdrop-blur-md rounded-2xl p-6 md:p-8 shadow-xl md:shadow-2xl border border-blue-100 md:border-white/50 flex flex-col justify-between">
             <h2
-              class="text-xl md:text-3xl font-bold bg-linear-to-r from-[#0052CC] to-[#00D2FF] bg-clip-text text-transparent pb-2 border-b border-blue-200">
-              Request A Callback!
+              class="text-xl md:text-2xl font-normal text-[#0052CC] md:bg-linear-to-r md:from-[#0052CC] md:to-[#00D2FF] md:bg-clip-text md:text-transparent pb-2.5 border-b border-blue-200">
+              <span class="block md:hidden">Enquiry Now !</span>
+              <span class="hidden md:block">Request A Callback!</span>
             </h2>
 
-            <form class="mt-6 space-y-6">
+            <form class="mt-6 space-y-5 md:space-y-6">
               <div>
                 <input type="text" placeholder="Full Name"
-                  class="w-full pb-2 border-b border-slate-300 focus:border-[#0052CC] focus:outline-none text-xs sm:text-sm bg-transparent placeholder-slate-400 font-medium" />
+                  class="w-full pb-2.5 border-b border-slate-300 focus:border-[#0052CC] focus:outline-none text-sm  bg-transparent placeholder-slate-400 font-normal" />
               </div>
 
               <div>
                 <input type="tel" placeholder="Phone Number"
-                  class="w-full pb-2 border-b border-slate-300 focus:border-[#0052CC] focus:outline-none text-xs sm:text-sm bg-transparent placeholder-slate-400 font-medium" />
+                  class="w-full pb-2.5 border-b border-slate-300 focus:border-[#0052CC] focus:outline-none text-sm  bg-transparent placeholder-slate-400 font-normal" />
               </div>
 
               <div class="flex items-center gap-2 pt-1">
                 <input type="checkbox" id="whatsapp" class="rounded text-[#0052CC] focus:ring-[#0052CC] w-3.5 h-3.5" />
-                <label for="whatsapp" class="text-[10px] sm:text-[11px] text-slate-600 font-medium">Do you have WhatsApp
+                <label for="whatsapp" class="text-[10px] sm:text-[14px] text-slate-600 font-normal">Do you have WhatsApp
                   activated on this number?</label>
               </div>
 
               <div>
                 <input type="email" placeholder="Email Address"
-                  class="w-full pb-2 border-b border-slate-300 focus:border-[#0052CC] focus:outline-none text-xs sm:text-sm bg-transparent placeholder-slate-400 font-medium" />
+                  class="w-full pb-2.5 border-b border-slate-300 focus:border-[#0052CC] focus:outline-none text-sm  bg-transparent placeholder-slate-400 font-normal" />
               </div>
 
               <div>
                 <input type="text" placeholder="Preferred Time To Call"
-                  class="w-full pb-2 border-b border-slate-300 focus:border-[#0052CC] focus:outline-none text-xs sm:text-sm bg-transparent placeholder-slate-400 font-medium" />
+                  class="w-full pb-2.5 border-b border-slate-300 focus:border-[#0052CC] focus:outline-none text-sm  bg-transparent placeholder-slate-400 font-normal" />
               </div>
 
-              <div class="flex items-start gap-2 pt-2">
+              <div class="flex items-start gap-2 pt-1.5">
                 <input type="checkbox" id="terms"
                   class="rounded text-[#0052CC] focus:ring-[#0052CC] w-3.5 h-3.5 mt-0.5 shrink-0" />
                 <label for="terms" class="text-[9px] sm:text-[10px] text-slate-500 leading-tight">
@@ -258,7 +257,7 @@
               </div>
 
               <button type="submit"
-                class="w-full py-3.5 mt-4 bg-linear-to-r from-[#0052CC] to-[#00D2FF] text-white font-bold rounded-xl text-sm shadow-lg shadow-blue-600/30 transition-all active:scale-98">
+                class="w-full py-3.5 mt-4 bg-[#0066CC] md:bg-linear-to-r md:from-[#0052CC] md:to-[#00D2FF] text-white font-normal rounded-lg text-sm shadow-lg shadow-blue-600/30 transition-all active:scale-98">
                 Submit
               </button>
             </form>
@@ -269,70 +268,53 @@
     </div>
   </section>
 
-  <!-- PLANS SECTION WITH TABS (ORIGINAL DESIGN, LARGER IMAGES) -->
-  <section class="relative py-12 md:py-16 bg-[#F8FAFC] overflow-hidden" data-aos="fade-up" data-aos-duration="800">
-    <div class="w-full px-4 sm:px-6 lg:px-10 text-center">
+  <!-- PLANS SECTION -->
+  <section id="plans" class="relative py-10 md:py-12 bg-[#F8FAFC] overflow-hidden" data-aos="fade-up"
+    data-aos-duration="800">
+    <div class="w-full px-0 sm:px-6 lg:px-10 text-center">
 
-      <!-- Section Heading -->
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-slate-800 tracking-tight" data-aos="zoom-in"
+      <h2 class="text-3xl sm:text-4xl font-normal text-slate-800 tracking-tight" data-aos="zoom-in"
         data-aos-delay="100">
         Plans
       </h2>
 
-      <!-- Decorative Line (Mobile Version Matching Design) -->
       <div class="flex items-center justify-center my-3 sm:hidden" data-aos="fade-in" data-aos-delay="150">
         <div class="h-px w-12 bg-blue-200"></div>
         <div class="w-2 h-2 rotate-45 bg-[#0066CC] mx-2"></div>
         <div class="h-px w-12 bg-blue-200"></div>
       </div>
 
-      <!-- TABS NAVIGATION -->
       <div class="flex flex-wrap justify-center gap-2.5 sm:gap-4 my-6 md:my-8" data-aos="fade-up" data-aos-delay="200">
         <button onclick="switchPlanTab('master-plan', this)"
-          class="plan-tab active-tab px-6 py-2.5 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 bg-linear-to-r from-[#0052CC] to-[#00D2FF] text-white shadow-md">
+          class="plan-tab active-tab px-6 py-2.5 text-sm sm:text-sm font-normal rounded-lg transition-all duration-300 bg-[#0052CC] text-white shadow-md">
           Master Plan
         </button>
 
         <button onclick="switchPlanTab('location-map', this)"
-          class="plan-tab px-6 py-2.5 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 bg-slate-200 hover:bg-slate-300 text-slate-700">
+          class="plan-tab px-6 py-2.5 text-sm sm:text-sm font-normal rounded-lg transition-all duration-300 bg-slate-200 hover:bg-slate-300 text-slate-700">
           Location Map
-        </button>
-
-        <button onclick="switchPlanTab('roads-plots', this)"
-          class="plan-tab px-6 py-2.5 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 bg-slate-200 hover:bg-slate-300 text-slate-700">
-          Roads & Plots
         </button>
       </div>
 
-      <!-- DISPLAY CONTAINER WITH LARGER IMAGES -->
       <div
-        class="relative w-full rounded-2xl overflow-hidden shadow-2xl border border-slate-200/80 min-h-100 sm:min-h-150 md:min-h-175 flex items-center justify-center"
+        class="relative w-full rounded-none md:rounded-xl overflow-hidden shadow-2xl border border-slate-200/80 min-h-50 sm:min-h-150 md:min-h-175 flex items-center justify-center"
         data-aos="zoom-in-up" data-aos-delay="300">
 
-        <!-- Blurred Images Stack (Off-limits to unblur) -->
         <div class="absolute inset-0 w-full h-full">
-          <!-- Master Plan Image -->
+
           <img loading="lazy" decoding="async" id="img-master-plan" src="./assets/images/plot-final-img.webp"
             alt="Master Plan Layout"
-            class="tab-img w-full h-full object-cover filter blur-md scale-105 transition-opacity duration-500 opacity-100" />
+            class="tab-img w-full h-full object-cover filter blur-[6px] scale-105 transition-opacity duration-500 opacity-100" />
 
-          <!-- Location Map Image -->
-          <img loading="lazy" decoding="async" id="img-location-map" src="./assets/images/plot-final-img.webp"
+          <img loading="lazy" decoding="async" id="img-location-map" src="./assets/images/location-map-main.webp"
             alt="Location Map Layout"
-            class="tab-img hidden w-full h-full object-cover filter blur-md scale-105 transition-opacity duration-500 opacity-0" />
-
-          <!-- Roads & Plots Image -->
-          <img loading="lazy" decoding="async" id="img-roads-plots" src="./assets/images/plot-final-img.webp"
-            alt="Roads and Plots Layout"
-            class="tab-img hidden w-full h-full object-cover filter blur-md scale-105 transition-opacity duration-500 opacity-0" />
+            class="tab-img hidden w-full h-full object-cover filter blur-[6px] scale-105 transition-opacity duration-500 opacity-0" />
         </div>
 
-        <!-- Permanently Dark Overlay over image -->
         <div class="absolute inset-0 bg-slate-900/25 backdrop-blur-[1px]"></div>
 
-        <!-- Action Button overlay -->
         <button id="plan-modal-btn" onclick="openPlanModal()"
-          class="relative z-10 inline-flex items-center gap-2.5 md:gap-3.5 bg-[#E59900] hover:bg-[#d48d00] text-white px-5 sm:px-8 md:px-11 py-2.5 sm:py-3.5 md:py-4 rounded-xl font-bold text-xs sm:text-base md:text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-yellow-300/40">
+          class="relative z-10 inline-flex items-center gap-2.5 md:gap-3.5 bg-[#E59900] hover:bg-[#d48d00] text-white px-5 sm:px-8 md:px-11 py-2.5 sm:py-3.5 md:py-4 rounded-lg font-normal text-sm sm:text-base md:text-lg shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 border border-yellow-300/40 cursor-pointer">
           <svg class="w-4 h-4 sm:w-6 sm:h-6 md:w-7 md:h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -346,51 +328,37 @@
     </div>
   </section>
 
+  <!-- 360 VIRTUAL SITE TOUR -->
 
-  <!-- site tour section -->
-
-  <section class="py-12 md:py-16 bg-[#F8FAFC] relative overflow-hidden" data-aos="fade-up" data-aos-duration="800">
+  <section id="site-tour" class="py-10 md:py-12 bg-[#F8FAFC] relative overflow-hidden" data-aos="fade-up"
+    data-aos-duration="800">
     <div class="container mx-auto px-4 text-center">
 
-      <!-- Section Heading with Gradient Text -->
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-slate-900 tracking-tight" data-aos="zoom-in"
+      <h2 class="text-3xl sm:text-4xl  font-normal text-slate-900 tracking-tight" data-aos="zoom-in"
         data-aos-delay="100">
-        360 Virtual <span class="bg-linear-to-r from-[#0052CC] to-[#00D2FF] bg-clip-text text-transparent">Site
+        360 Virtual <span class="text-[#0073DB]">Site
           Tour</span>
       </h2>
 
-      <!-- Decorative Line (Mobile Version Matching Design) -->
       <div class="flex items-center justify-center my-3 sm:hidden" data-aos="fade-in" data-aos-delay="150">
         <div class="h-px w-12 bg-blue-200"></div>
         <div class="w-2 h-2 rotate-45 bg-[#0066CC] mx-2"></div>
         <div class="h-px w-12 bg-blue-200"></div>
       </div>
 
-      <!-- VIDEO CONTAINER WITH CARD FRAME -->
-      <div class="mt-6 md:mt-8 bg-slate-200/60 p-2.5 sm:p-8 rounded-2xl shadow-inner container mx-auto"
+      <div class="mt-6 md:mt-8 bg-slate-200/60 p-2.5 sm:p-8 rounded-xl shadow-inner container mx-auto"
         data-aos="zoom-in-up" data-aos-delay="200">
-        <div class="relative w-full aspect-video rounded-xl overflow-hidden bg-slate-900 group shadow-md cursor-pointer"
+        <div class="relative w-full aspect-video rounded-lg overflow-hidden bg-slate-900 group shadow-md cursor-pointer"
           onclick="openVideoModal()">
 
-          <!-- Dummy Video Background Layer -->
           <video class="w-full h-full object-cover opacity-90 transition-transform duration-700 group-hover:scale-105"
             muted loop autoplay playsinline poster="./assets/images/thumb-1.webp">
-            <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-              type="video/mp4" />
+            <source src="./assets/video.mp4" type="video/mp4" />
           </video>
 
-          <!-- Dark Overlay for Contrast -->
           <div class="absolute inset-0 bg-black/30 group-hover:bg-black/20 transition-colors"></div>
 
-          <!-- Play Button Icon Overlay -->
-          <div class="absolute inset-0 flex items-center justify-center">
-            <div
-              class="w-14 h-14 sm:w-20 sm:h-20 rounded-full border-2 border-white/80 bg-slate-900/40 backdrop-blur-sm flex items-center justify-center text-white transition-all duration-300 group-hover:scale-110 group-hover:bg-[#0066CC]/80 group-hover:border-white shadow-2xl">
-              <svg class="w-6 h-6 sm:w-10 sm:h-10 fill-current translate-x-0.5" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z" />
-              </svg>
-            </div>
-          </div>
+
 
         </div>
       </div>
@@ -398,118 +366,103 @@
     </div>
   </section>
 
-  <!-- Connectivities And Surroundings -->
-  <section class="py-12 md:py-16 bg-[#F8FAFC] relative overflow-hidden" data-aos="fade-up" data-aos-duration="800">
+  <!-- CONNECTIVITIES & SURROUNDINGS -->
+  <section id="connectivity" class="py-10 md:py-12 bg-[#F8FAFC] relative overflow-hidden" data-aos="fade-up"
+    data-aos-duration="800">
     <div class="container mx-auto px-4 text-center">
 
-      <!-- Section Title with Gradient Accent -->
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-slate-900 tracking-tight" data-aos="zoom-in"
+      <h2 class="text-3xl sm:text-4xl  font-normal text-slate-900 tracking-tight" data-aos="zoom-in"
         data-aos-delay="100">
-        Connectivities And <span
-          class="bg-linear-to-r from-[#0052CC] to-[#00D2FF] bg-clip-text text-transparent">Surroundings</span>
+        Connectivities And <span class="text-[#0073DB]">Surroundings</span>
       </h2>
 
-      <!-- Decorative Line (Mobile Version Matching Design) -->
       <div class="flex items-center justify-center my-3 sm:hidden" data-aos="fade-in" data-aos-delay="150">
         <div class="h-px w-12 bg-blue-200"></div>
         <div class="w-2 h-2 rotate-45 bg-[#0066CC] mx-2"></div>
         <div class="h-px w-12 bg-blue-200"></div>
       </div>
 
-      <!-- 6 CARDS GRID (3 columns on Desktop, Tablet & Mobile) -->
       <div class="grid grid-cols-3 gap-3 sm:gap-6 mt-6 md:mt-10 container mx-auto" data-aos-stagger="80">
 
-        <!-- Card 1: KWIN City -->
         <div
-          class="bg-[#E2E8F0]/70 hover:bg-[#E2E8F0] border border-slate-200 rounded-2xl p-2 sm:p-3.5 flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+          class="bg-[#E2E8F0]/70 hover:bg-[#E2E8F0] border border-slate-200 rounded-xl p-1 sm:p-3.5 flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
           data-aos="fade-up" data-aos-delay="100">
-          <div class="w-full aspect-4/2.5 rounded-2xl overflow-hidden mb-2 sm:mb-3 shadow-xs">
-            <img loading="lazy" decoding="async"
-              src="./assets/images/city.jpg"
-              alt="KWIN City" class="w-full h-full object-cover" />
+          <div class="w-full aspect-4/3 rounded-lg overflow-hidden mb-2 sm:mb-3 shadow-xs">
+            <img loading="lazy" decoding="async" src="./assets/images/city.jpg" alt="KWIN City"
+              class="w-full h-full object-cover" />
           </div>
           <div class="mt-auto py-1">
-            <h3 class="text-[11px] sm:text-lg font-semibold text-slate-800 leading-tight">KWIN City</h3>
-            <p class="text-[11px] sm:text-lg font-bold text-[#0066CC] mt-0.5">10 Km</p>
+            <h3 class="text-[14px] sm:text-lg font-normal text-slate-800 leading-tight">KWIN City</h3>
+            <p class="text-[14px] sm:text-lg font-normal text-[#0066CC] mt-0.5">10 Km</p>
           </div>
         </div>
 
-        <!-- Card 2: STRR -->
         <div
-          class="bg-[#E2E8F0]/70 hover:bg-[#E2E8F0] border border-slate-200 rounded-2xl p-2 sm:p-3.5 flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+          class="bg-[#E2E8F0]/70 hover:bg-[#E2E8F0] border border-slate-200 rounded-xl p-1 sm:p-3.5 flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
           data-aos="fade-up" data-aos-delay="200">
-          <div class="w-full aspect-4/2.5 rounded-2xl overflow-hidden mb-2 sm:mb-3 shadow-xs">
-            <img loading="lazy" decoding="async"
-              src="./assets/images/strr.jpg"
-              alt="STRR" class="w-full h-full object-cover" />
+          <div class="w-full aspect-4/3 rounded-lg overflow-hidden mb-2 sm:mb-3 shadow-xs">
+            <img loading="lazy" decoding="async" src="./assets/images/strr.jpg" alt="STRR"
+              class="w-full h-full object-cover" />
           </div>
           <div class="mt-auto py-1">
-            <h3 class="text-[11px] sm:text-lg font-semibold text-slate-800 leading-tight">
+            <h3 class="text-[14px] sm:text-lg font-normal text-slate-800 leading-tight">
               <span class="hidden sm:inline">On Proposed </span>STRR
             </h3>
-            <p class="text-[11px] sm:text-lg font-bold text-[#0066CC] mt-0.5 sm:hidden">10 Km</p>
-            <p class="text-[11px] sm:text-lg font-bold text-[#0066CC] mt-0.5 hidden sm:block">20 mins</p>
+            <p class="text-[14px] sm:text-lg font-normal text-[#0066CC] mt-0.5 sm:hidden">10 Km</p>
+            <p class="text-[14px] sm:text-lg font-normal text-[#0066CC] mt-0.5 hidden sm:block">20 mins</p>
           </div>
         </div>
 
-        <!-- Card 3: Airport Access -->
         <div
-          class="bg-[#E2E8F0]/70 hover:bg-[#E2E8F0] border border-slate-200 rounded-2xl p-2 sm:p-3.5 flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+          class="bg-[#E2E8F0]/70 hover:bg-[#E2E8F0] border border-slate-200 rounded-xl p-1 sm:p-3.5 flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
           data-aos="fade-up" data-aos-delay="300">
-          <div class="w-full aspect-4/2.5 rounded-2xl overflow-hidden mb-2 sm:mb-3 shadow-xs">
-            <img loading="lazy" decoding="async"
-              src="./assets/images/airport.jpg"
-              alt="Airport Access" class="w-full h-full object-cover" />
+          <div class="w-full aspect-4/3 rounded-lg overflow-hidden mb-2 sm:mb-3 shadow-xs">
+            <img loading="lazy" decoding="async" src="./assets/images/airport.jpg" alt="Airport Access"
+              class="w-full h-full object-cover" />
           </div>
           <div class="mt-auto py-1">
-            <h3 class="text-[11px] sm:text-lg font-semibold text-slate-800 leading-tight">Airport Access</h3>
-            <p class="text-[11px] sm:text-lg font-bold text-[#0066CC] mt-0.5 sm:hidden">45 Km</p>
-            <p class="text-[11px] sm:text-lg font-bold text-[#0066CC] mt-0.5 hidden sm:block">45 Mins</p>
+            <h3 class="text-[14px] sm:text-lg font-normal text-slate-800 leading-tight">Airport Access</h3>
+            <p class="text-[14px] sm:text-lg font-normal text-[#0066CC] mt-0.5 sm:hidden">45 Km</p>
+            <p class="text-[14px] sm:text-lg font-normal text-[#0066CC] mt-0.5 hidden sm:block">45 Mins</p>
           </div>
         </div>
 
-        <!-- Card 4: IRR 300ft Road -->
         <div
-          class="bg-[#E2E8F0]/70 hover:bg-[#E2E8F0] border border-slate-200 rounded-2xl p-2 sm:p-3.5 flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+          class="bg-[#E2E8F0]/70 hover:bg-[#E2E8F0] border border-slate-200 rounded-xl p-1 sm:p-3.5 flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
           data-aos="fade-up" data-aos-delay="400">
-          <div class="w-full aspect-4/2.5 rounded-2xl overflow-hidden mb-2 sm:mb-3 shadow-xs">
-            <img loading="lazy" decoding="async"
-              src="./assets/images/irr.jpg"
-              alt="IRR 300ft Road" class="w-full h-full object-cover" />
+          <div class="w-full aspect-4/3 rounded-lg overflow-hidden mb-2 sm:mb-3 shadow-xs">
+            <img loading="lazy" decoding="async" src="./assets/images/irr.jpg" alt="IRR 300ft Road"
+              class="w-full h-full object-cover" />
           </div>
           <div class="mt-auto py-1">
-            <h3 class="text-[11px] sm:text-lg font-semibold text-slate-800 leading-tight">IRR</h3>
-            <p class="text-[11px] sm:text-lg font-bold text-[#0066CC] mt-0.5">300ft Road</p>
+            <h3 class="text-[14px] sm:text-lg font-normal text-slate-800 leading-tight">IRR</h3>
+            <p class="text-[14px] sm:text-lg font-normal text-[#0066CC] mt-0.5">300ft Road</p>
           </div>
         </div>
 
-        <!-- Card 5: NH44 Connectivity -->
         <div
-          class="bg-[#E2E8F0]/70 hover:bg-[#E2E8F0] border border-slate-200 rounded-2xl p-2 sm:p-3.5 flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+          class="bg-[#E2E8F0]/70 hover:bg-[#E2E8F0] border border-slate-200 rounded-xl p-1 sm:p-3.5 flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
           data-aos="fade-up" data-aos-delay="500">
-          <div class="w-full aspect-4/2.5 rounded-2xl overflow-hidden mb-2 sm:mb-3 shadow-xs">
-            <img loading="lazy" decoding="async"
-              src="./assets/images/nh44.jpg"
-              alt="NH44 Connectivity" class="w-full h-full object-cover" />
+          <div class="w-full aspect-4/3 rounded-lg overflow-hidden mb-2 sm:mb-3 shadow-xs">
+            <img loading="lazy" decoding="async" src="./assets/images/nh44.jpg" alt="NH44 Connectivity"
+              class="w-full h-full object-cover" />
           </div>
           <div class="mt-auto py-1">
-            <h3 class="text-[11px] sm:text-lg font-semibold text-slate-800 leading-tight">NH44</h3>
-            <p class="text-[11px] sm:text-lg font-bold text-[#0066CC] mt-0.5">Connectivity</p>
+            <h3 class="text-[14px] sm:text-lg font-normal text-slate-800 leading-tight">NH44</h3>
+            <p class="text-[14px] sm:text-lg font-normal text-[#0066CC] mt-0.5">Connectivity</p>
           </div>
         </div>
 
-        <!-- Card 6: Railway -->
         <div
-          class="bg-[#E2E8F0]/70 hover:bg-[#E2E8F0] border border-slate-200 rounded-2xl p-2 sm:p-3.5 flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+          class="bg-[#E2E8F0]/70 hover:bg-[#E2E8F0] border border-slate-200 rounded-xl p-1 sm:p-3.5 flex flex-col items-center text-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
           data-aos="fade-up" data-aos-delay="600">
-          <div class="w-full aspect-4/2.5 rounded-2xl overflow-hidden mb-2 sm:mb-3 shadow-xs">
-            <img loading="lazy" decoding="async"
-              src="./assets/images/railway.jpg"
-              alt="Railway" class="w-full h-full object-cover" />
+          <div class="w-full aspect-4/3 rounded-lg overflow-hidden mb-2 sm:mb-3 shadow-xs">
+            <img loading="lazy" decoding="async" src="./assets/images/railway.jpg" alt="Railway"
+              class="w-full h-full object-cover" />
           </div>
           <div class="mt-auto py-1">
-            <h3 class="text-[11px] sm:text-lg font-semibold text-slate-800 leading-tight">Railway</h3>
-            <p class="text-[11px] sm:text-lg font-bold text-[#0066CC] mt-0.5">12 min</p>
+            <h3 class="text-[14px] sm:text-lg font-normal text-slate-800 leading-tight">Railway</h3>
+            <p class="text-[14px] sm:text-lg font-normal text-[#0066CC] mt-0.5">12 min</p>
           </div>
         </div>
 
@@ -518,187 +471,169 @@
     </div>
   </section>
 
-
-  <!-- Amenities -->
-  <section class="py-12 md:py-16 bg-[#F8FAFC] relative overflow-hidden" data-aos="fade-up" data-aos-duration="800">
+  <!-- AMENITIES SECTION -->
+  <section id="amenities" class="py-10 md:py-12 bg-[#F8FAFC] relative overflow-hidden" data-aos="fade-up"
+    data-aos-duration="800">
     <div class="container mx-auto px-4 text-center">
 
-      <!-- Section Heading -->
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-slate-800 tracking-tight" data-aos="zoom-in"
+      <h2 class="text-3xl sm:text-4xl  font-normal text-slate-800 tracking-tight" data-aos="zoom-in"
         data-aos-delay="100">
         Amenities
       </h2>
 
-      <!-- Decorative Line (Mobile Version Matching Design) -->
       <div class="flex items-center justify-center my-3 sm:hidden" data-aos="fade-in" data-aos-delay="150">
         <div class="h-px w-12 bg-blue-200"></div>
         <div class="w-2 h-2 rotate-45 bg-[#0066CC] mx-2"></div>
         <div class="h-px w-12 bg-blue-200"></div>
       </div>
 
-      <!-- MAIN LIGHT BLUE CARD CONTAINER -->
-      <div class="mt-6 md:mt-8 bg-[#EEF5FF] border border-blue-100/60 rounded-3xl p-4 sm:p-8 md:p-12 shadow-sm"
+      <div class="mt-6 md:mt-8 bg-[#EEF5FF] border border-blue-100/60 rounded-2xl p-4 sm:p-8 md:p-12 shadow-sm"
         data-aos="zoom-in-up" data-aos-delay="200">
 
-        <!-- 9 AMENITIES TABS GRID (3-Column Layout) -->
-        <div class="grid grid-cols-3 gap-y-6 gap-x-3 sm:gap-x-6 sm:gap-y-8 max-w-6xl mx-auto">
+        <div class="grid grid-cols-3 gap-y-6 gap-x-3 sm:gap-x-2 sm:gap-y-2 max-w-6xl mx-auto">
 
-          <!-- Tab 1: Basketball / Football Turf -->
           <button onclick="selectAmenity('adventure', this)"
             class="amenity-tab active-amenity group flex flex-col items-center text-center focus:outline-none">
             <div
-              class="w-20 h-20 sm:w-28 sm:h-28 md:w-50 md:h-50 rounded-2xl sm:rounded-full p-1 bg-white ring-2 ring-[#0066CC] shadow-md group-hover:scale-105 transition-all duration-300 overflow-hidden">
+              class="w-28 h-28 md:w-50 md:h-50 rounded-xl sm:rounded-full p-1 bg-white ring-2 ring-[#0066CC] shadow-md group-hover:scale-105 transition-all duration-300 overflow-hidden">
               <img loading="lazy" decoding="async" src="./assets/images/adventure.webp" alt="adventure"
-                class="w-full h-full object-cover rounded-xl sm:rounded-full" />
+                class="w-full h-full object-cover rounded-lg sm:rounded-full" />
             </div>
             <span
-              class="mt-2 sm:mt-3 text-[11px] sm:text-xs md:text-sm font-semibold text-slate-800 group-hover:text-[#0066CC] transition-colors leading-tight">
+              class="mt-2 sm:mt-3 text-[14px] sm:text-sm md:text-sm font-normal text-slate-800 group-hover:text-[#0066CC] transition-colors leading-tight">
               Adventure
             </span>
           </button>
 
-          <!-- Tab 2: Swimming Pool -->
           <button onclick="selectAmenity('archery', this)"
             class="amenity-tab group flex flex-col items-center text-center focus:outline-none">
             <div
-              class="w-20 h-20 sm:w-28 sm:h-28 md:w-50 md:h-50 rounded-2xl sm:rounded-full p-1 bg-white ring-1 ring-slate-200 shadow-md group-hover:scale-105 transition-all duration-300 overflow-hidden">
+              class="w-28 h-28 md:w-50 md:h-50 rounded-xl sm:rounded-full p-1 bg-white ring-1 ring-slate-200 shadow-md group-hover:scale-105 transition-all duration-300 overflow-hidden">
               <img loading="lazy" decoding="async" src="./assets/images/archery.webp" alt="archery"
-                class="w-full h-full object-cover rounded-xl sm:rounded-full" />
+                class="w-full h-full object-cover rounded-lg sm:rounded-full" />
             </div>
             <span
-              class="mt-2 sm:mt-3 text-[11px] sm:text-xs md:text-sm font-semibold text-slate-800 group-hover:text-[#0066CC] transition-colors leading-tight">
+              class="mt-2 sm:mt-3 text-[14px] sm:text-sm md:text-sm font-normal text-slate-800 group-hover:text-[#0066CC] transition-colors leading-tight">
               Archery
             </span>
           </button>
 
-          <!-- Tab 3: Miyawaki Forest -->
           <button onclick="selectAmenity('basketball', this)"
             class="amenity-tab group flex flex-col items-center text-center focus:outline-none">
             <div
-              class="w-20 h-20 sm:w-28 sm:h-28 md:w-50 md:h-50 rounded-2xl sm:rounded-full p-1 bg-white ring-1 ring-slate-200 shadow-md group-hover:scale-105 transition-all duration-300 overflow-hidden">
+              class="w-28 h-28 md:w-50 md:h-50 rounded-xl sm:rounded-full p-1 bg-white ring-1 ring-slate-200 shadow-md group-hover:scale-105 transition-all duration-300 overflow-hidden">
               <img loading="lazy" decoding="async" src="./assets/images/basketball-court.webp" alt="basketball-court"
-                class="w-full h-full object-cover rounded-xl sm:rounded-full" />
+                class="w-full h-full object-cover rounded-lg sm:rounded-full" />
             </div>
             <span
-              class="mt-2 sm:mt-3 text-[11px] sm:text-xs md:text-sm font-semibold text-slate-800 group-hover:text-[#0066CC] transition-colors leading-tight">
+              class="mt-2 sm:mt-3 text-[14px] sm:text-sm md:text-sm font-normal text-slate-800 group-hover:text-[#0066CC] transition-colors leading-tight">
               Basketball-court
             </span>
           </button>
 
-          <!-- Tab 4: Open Air Gym -->
           <button onclick="selectAmenity('cafe', this)"
             class="amenity-tab group flex flex-col items-center text-center focus:outline-none">
             <div
-              class="w-20 h-20 sm:w-28 sm:h-28 md:w-50 md:h-50 rounded-2xl sm:rounded-full p-1 bg-white ring-1 ring-slate-200 shadow-md group-hover:scale-105 transition-all duration-300 overflow-hidden">
+              class="w-28 h-28 md:w-50 md:h-50 rounded-xl sm:rounded-full p-1 bg-white ring-1 ring-slate-200 shadow-md group-hover:scale-105 transition-all duration-300 overflow-hidden">
               <img loading="lazy" decoding="async" src="./assets/images/cafe.webp" alt="cafe"
-                class="w-full h-full object-cover rounded-xl sm:rounded-full" />
+                class="w-full h-full object-cover rounded-lg sm:rounded-full" />
             </div>
             <span
-              class="mt-2 sm:mt-3 text-[11px] sm:text-xs md:text-sm font-semibold text-slate-800 group-hover:text-[#0066CC] transition-colors leading-tight">
+              class="mt-2 sm:mt-3 text-[14px] sm:text-sm md:text-sm font-normal text-slate-800 group-hover:text-[#0066CC] transition-colors leading-tight">
               cafe
             </span>
           </button>
 
-          <!-- Tab 5: Senior Citizens Zone -->
           <button onclick="selectAmenity('foosball', this)"
             class="amenity-tab group flex flex-col items-center text-center focus:outline-none">
             <div
-              class="w-20 h-20 sm:w-28 sm:h-28 md:w-50 md:h-50 rounded-2xl sm:rounded-full p-1 bg-white ring-1 ring-slate-200 shadow-md group-hover:scale-105 transition-all duration-300 overflow-hidden">
+              class="w-28 h-28 md:w-50 md:h-50 rounded-xl sm:rounded-full p-1 bg-white ring-1 ring-slate-200 shadow-md group-hover:scale-105 transition-all duration-300 overflow-hidden">
               <img loading="lazy" decoding="async" src="./assets/images/foosball.webp" alt="foosball"
-                class="w-full h-full object-cover rounded-xl sm:rounded-full" />
+                class="w-full h-full object-cover rounded-lg sm:rounded-full" />
             </div>
             <span
-              class="mt-2 sm:mt-3 text-[11px] sm:text-xs md:text-sm font-semibold text-slate-800 group-hover:text-[#0066CC] transition-colors leading-tight">
+              class="mt-2 sm:mt-3 text-[14px] sm:text-sm md:text-sm font-normal text-slate-800 group-hover:text-[#0066CC] transition-colors leading-tight">
               Foosball
             </span>
           </button>
 
-          <!-- Tab 6: Pet Park -->
           <button onclick="selectAmenity('forest', this)"
             class="amenity-tab group flex flex-col items-center text-center focus:outline-none">
             <div
-              class="w-20 h-20 sm:w-28 sm:h-28 md:w-50 md:h-50 rounded-2xl sm:rounded-full p-1 bg-white ring-1 ring-slate-200 shadow-md group-hover:scale-105 transition-all duration-300 overflow-hidden">
+              class="w-28 h-28 md:w-50 md:h-50 rounded-xl sm:rounded-full p-1 bg-white ring-1 ring-slate-200 shadow-md group-hover:scale-105 transition-all duration-300 overflow-hidden">
               <img loading="lazy" decoding="async" src="./assets/images/miyawaki-forest.jpg.jpeg" alt="miyawaki-forest"
-                class="w-full h-full object-cover rounded-xl sm:rounded-full" />
+                class="w-full h-full object-cover rounded-lg sm:rounded-full" />
             </div>
             <span
-              class="mt-2 sm:mt-3 text-[11px] sm:text-xs md:text-sm font-semibold text-slate-800 group-hover:text-[#0066CC] transition-colors leading-tight">
+              class="mt-2 sm:mt-3 text-[14px] sm:text-sm md:text-sm font-normal text-slate-800 group-hover:text-[#0066CC] transition-colors leading-tight">
               Miyawaki Forest
             </span>
           </button>
 
-          <!-- Tab 7: Yoga Deck -->
           <button onclick="selectAmenity('climbing', this)"
             class="amenity-tab group flex flex-col items-center text-center focus:outline-none">
             <div
-              class="w-20 h-20 sm:w-28 sm:h-28 md:w-50 md:h-50 rounded-2xl sm:rounded-full p-1 bg-white ring-1 ring-slate-200 shadow-md group-hover:scale-105 transition-all duration-300 overflow-hidden">
+              class="w-28 h-28 md:w-50 md:h-50 rounded-xl sm:rounded-full p-1 bg-white ring-1 ring-slate-200 shadow-md group-hover:scale-105 transition-all duration-300 overflow-hidden">
               <img loading="lazy" decoding="async" src="./assets/images/rock-climbing.jpg" alt="rock-climbing"
-                class="w-full h-full object-cover rounded-xl sm:rounded-full" />
+                class="w-full h-full object-cover rounded-lg sm:rounded-full" />
             </div>
             <span
-              class="mt-2 sm:mt-3 text-[11px] sm:text-xs md:text-sm font-semibold text-slate-800 group-hover:text-[#0066CC] transition-colors leading-tight">
+              class="mt-2 sm:mt-3 text-[14px] sm:text-sm md:text-sm font-normal text-slate-800 group-hover:text-[#0066CC] transition-colors leading-tight">
               Rock Climbing
             </span>
           </button>
 
-          <!-- Tab 8: Rock Climbing & Archery (Featured Display) -->
           <button onclick="selectAmenity('senior', this)"
             class="amenity-tab group flex flex-col items-center text-center focus:outline-none">
             <div
-              class="w-20 h-20 sm:w-28 sm:h-28 md:w-50 md:h-50 rounded-2xl sm:rounded-full p-1 bg-white ring-1 ring-slate-200 shadow-md group-hover:scale-105 transition-all duration-300 overflow-hidden">
+              class="w-28 h-28 md:w-50 md:h-50 rounded-xl sm:rounded-full p-1 bg-white ring-1 ring-slate-200 shadow-md group-hover:scale-105 transition-all duration-300 overflow-hidden">
               <img loading="lazy" decoding="async" src="./assets/images/senior-citizen-zone.jpg"
-                alt="senior-citizen-zone" class="w-full h-full object-cover rounded-xl sm:rounded-full" />
+                alt="senior-citizen-zone" class="w-full h-full object-cover rounded-lg sm:rounded-full" />
             </div>
             <span
-              class="mt-2 sm:mt-3 text-[11px] sm:text-xs md:text-sm font-semibold text-slate-800 group-hover:text-[#0066CC] transition-colors leading-tight">
+              class="mt-2 sm:mt-3 text-[14px] sm:text-sm md:text-sm font-normal text-slate-800 group-hover:text-[#0066CC] transition-colors leading-tight">
               Senior Citizen Zone
             </span>
           </button>
 
-          <!-- Tab 9: Cafe & Clubhouse (9th Added Item) -->
           <button onclick="selectAmenity('swimming', this)"
             class="amenity-tab group flex flex-col items-center text-center focus:outline-none">
             <div
-              class="w-20 h-20 sm:w-28 sm:h-28 md:w-50 md:h-50 rounded-2xl sm:rounded-full p-1 bg-white ring-1 ring-slate-200 shadow-md group-hover:scale-105 transition-all duration-300 overflow-hidden">
+              class="w-28 h-28 md:w-50 md:h-50 rounded-xl sm:rounded-full p-1 bg-white ring-1 ring-slate-200 shadow-md group-hover:scale-105 transition-all duration-300 overflow-hidden">
               <img loading="lazy" decoding="async" src="./assets/images/swimming-pool.jpg" alt="swimming-pool"
-                class="w-full h-full object-cover rounded-xl sm:rounded-full" />
+                class="w-full h-full object-cover rounded-lg sm:rounded-full" />
             </div>
             <span
-              class="mt-2 sm:mt-3 text-[11px] sm:text-xs md:text-sm font-semibold text-slate-800 group-hover:text-[#0066CC] transition-colors leading-tight">
+              class="mt-2 sm:mt-3 text-[14px] sm:text-sm md:text-sm font-normal text-slate-800 group-hover:text-[#0066CC] transition-colors leading-tight">
               Swimming Pool
             </span>
           </button>
 
         </div>
 
-        <!-- LARGE DISPLAY IMAGE BOX AT BOTTOM -->
         <div
-          class="relative mt-8 md:mt-12 w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-2xl min-h-65 sm:min-h-100 md:min-h-125"
+          class="relative mt-8 md:mt-12 w-full rounded-xl md:rounded-2xl overflow-hidden shadow-2xl min-h-65 sm:min-h-100 md:min-h-125"
           data-aos="zoom-in" data-aos-delay="300">
 
-          <!-- Preview Display Image -->
           <img loading="lazy" decoding="async" id="amenity-large-preview" src="./assets/images/adventure.jpg.jpeg"
             alt="Selected Amenity Preview"
             class="w-full h-full absolute inset-0 object-cover transition-all duration-500 scale-100" />
 
-          <!-- Subtle Gradient Overlay -->
           <div class="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-black/10"></div>
 
-          <!-- Hotspot Labels Overlay (Dynamic / Decorative) -->
           <div id="amenity-hotspots"
             class="absolute inset-0 pointer-events-none p-4 sm:p-8 flex flex-col justify-between">
             <div class="flex justify-between items-start">
               <div
-                class="bg-white/80 backdrop-blur-md px-3 py-1.5 rounded-lg text-xs sm:text-sm font-bold text-slate-900 shadow-md inline-flex items-center gap-1.5">
+                class="bg-white/80 backdrop-blur-md px-3 py-1.5 rounded-lg text-sm sm:text-sm font-normal text-slate-900 shadow-md inline-flex items-center gap-1.5">
                 <span class="w-2 h-2 rounded-full bg-[#0066CC]"></span>
                 <span id="hotspot-title">Adventure Play Zone</span>
               </div>
             </div>
 
-            <!-- Bottom View More Action -->
             <div class="pointer-events-auto flex justify-center pb-2">
               <button onclick="openPlanModal()"
-                class="bg-white/90 hover:bg-white text-slate-800 hover:text-[#0066CC] px-6 py-2.5 rounded-xl text-xs sm:text-sm font-bold shadow-lg transition-all transform hover:scale-105 backdrop-blur-sm">
+                class="bg-white/90 hover:bg-white text-slate-800 hover:text-[#0066CC] px-6 py-2.5 rounded-lg text-sm sm:text-sm font-normal shadow-lg transition-all transform hover:scale-105 backdrop-blur-sm">
                 View More
               </button>
             </div>
@@ -711,61 +646,55 @@
     </div>
   </section>
 
-
-  <!-- location advantages -->
-  <section class="py-12 md:py-16 bg-[#F8FAFC] relative overflow-hidden" data-aos="fade-up" data-aos-duration="800">
+  <!-- LOCATION ADVANTAGES -->
+  <section id="location-advantages" class="py-10 md:py-12 bg-[#F8FAFC] relative overflow-hidden" data-aos="fade-up"
+    data-aos-duration="800">
     <div class="container mx-auto px-4 text-center">
 
-      <!-- Section Heading -->
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-slate-900 tracking-tight" data-aos="zoom-in"
+      <h2 class="text-3xl sm:text-4xl  font-normal text-slate-900 tracking-tight" data-aos="zoom-in"
         data-aos-delay="100">
-        Location <span
-          class="bg-linear-to-r from-[#0052CC] to-[#00D2FF] bg-clip-text text-transparent">Advantages</span>
+        Location <span class="text-[#0073DB]">Advantages</span>
       </h2>
 
-     <!-- Decorative Line (Mobile Version Matching Design) -->
       <div class="flex items-center justify-center my-3 sm:hidden" data-aos="fade-in" data-aos-delay="150">
         <div class="h-px w-12 bg-blue-200"></div>
         <div class="w-2 h-2 rotate-45 bg-[#0066CC] mx-2"></div>
         <div class="h-px w-12 bg-blue-200"></div>
       </div>
 
-      <!-- CATEGORY TABS -->
       <div class="flex flex-wrap justify-center gap-2 sm:gap-3 my-6 md:my-8" data-aos="fade-up" data-aos-delay="200">
         <button onclick="switchLocationTab('hospital', this)"
-          class="loc-tab active-loc-tab px-4 sm:px-6 py-2.5 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 bg-[#0066CC] text-white shadow-md">
+          class="loc-tab active-loc-tab px-4 sm:px-6 py-2.5 text-sm sm:text-sm font-normal rounded-lg transition-all duration-300 bg-[#0066CC] text-white shadow-md">
           Hospital
         </button>
         <button onclick="switchLocationTab('companies', this)"
-          class="loc-tab px-4 sm:px-6 py-2.5 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 bg-slate-200 hover:bg-slate-300 text-slate-700">
+          class="loc-tab px-4 sm:px-6 py-2.5 text-sm sm:text-sm font-normal rounded-lg transition-all duration-300 bg-slate-200 hover:bg-slate-300 text-slate-700">
           Companies
         </button>
         <button onclick="switchLocationTab('connectivity', this)"
-          class="loc-tab px-4 sm:px-6 py-2.5 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 bg-slate-200 hover:bg-slate-300 text-slate-700">
+          class="loc-tab px-4 sm:px-6 py-2.5 text-sm sm:text-sm font-normal rounded-lg transition-all duration-300 bg-slate-200 hover:bg-slate-300 text-slate-700">
           Connectivity
         </button>
         <button onclick="switchLocationTab('schools', this)"
-          class="loc-tab px-4 sm:px-6 py-2.5 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 bg-slate-200 hover:bg-slate-300 text-slate-700">
+          class="loc-tab px-4 sm:px-6 py-2.5 text-sm sm:text-sm font-normal rounded-lg transition-all duration-300 bg-slate-200 hover:bg-slate-300 text-slate-700">
           Schools
         </button>
         <button onclick="switchLocationTab('colleges', this)"
-          class="loc-tab px-4 sm:px-6 py-2.5 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 bg-slate-200 hover:bg-slate-300 text-slate-700">
+          class="loc-tab px-4 sm:px-6 py-2.5 text-sm sm:text-sm font-normal rounded-lg transition-all duration-300 bg-slate-200 hover:bg-slate-300 text-slate-700">
           Colleges
         </button>
         <button onclick="switchLocationTab('recreational', this)"
-          class="loc-tab px-4 sm:px-6 py-2.5 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 bg-slate-200 hover:bg-slate-300 text-slate-700">
+          class="loc-tab px-4 sm:px-6 py-2.5 text-sm sm:text-sm font-normal rounded-lg transition-all duration-300 bg-slate-200 hover:bg-slate-300 text-slate-700">
           Recreational
         </button>
       </div>
 
-      <!-- MAIN CONTENT CONTAINER (Mobile: Map Top, Cards Bottom | Desktop: Cards Top, Map Bottom) -->
       <div class="flex flex-col gap-6 md:gap-8 container mx-auto">
 
-        <!-- MAP CONTAINER (Shows First on Mobile, Bottom on Desktop) -->
         <div
-          class="order-1 md:order-2 w-full rounded-2xl md:rounded-3xl overflow-hidden shadow-lg border border-slate-200 bg-white p-2"
+          class="order-1 md:order-2 w-full rounded-xl md:rounded-2xl overflow-hidden shadow-lg border border-slate-200 bg-white p-2"
           data-aos="zoom-in" data-aos-delay="300">
-          <div class="w-full aspect-4/3 sm:aspect-21/9 rounded-xl overflow-hidden">
+          <div class="w-full aspect-4/3 sm:aspect-21/9 rounded-lg overflow-hidden">
             <iframe id="advantage-map-iframe" class="w-full h-full border-0 filter contrast-105"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.001693891789!2d77.5945627!3d12.9715987!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1680000000000!5m2!1sen!2sin"
               allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
@@ -773,11 +702,10 @@
           </div>
         </div>
 
-        <!-- DYNAMIC CARDS CONTAINER (Shows Second on Mobile, Top on Desktop) -->
         <div class="order-2 md:order-1 w-full" data-aos="fade-up" data-aos-delay="250">
           <div id="cards-grid"
             class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4 transition-all duration-300 text-left">
-            <!-- Dynamically Injected via JS -->
+
           </div>
         </div>
 
@@ -786,54 +714,49 @@
     </div>
   </section>
 
-  <!-- price renge -->
-  <section class="py-12 md:py-16 bg-[#F8FAFC] relative overflow-hidden">
+  <!-- PRICE TREND SECTION -->
+  <section id="price-trend" class="py-10 md:py-12 bg-[#F8FAFC] relative overflow-hidden">
     <div class="max-w-4xl mx-auto px-4 text-center">
 
-      <!-- Section Heading -->
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-slate-900 tracking-tight" data-aos="zoom-in"
+      <h2 class="text-3xl sm:text-4xl  font-normal text-slate-900 tracking-tight" data-aos="zoom-in"
         data-aos-duration="600">
-        Price <span class="bg-linear-to-r from-[#0052CC] to-[#00D2FF] bg-clip-text text-transparent">Trend</span>
+        Price <span class="text-[#0073DB]">Trend</span>
       </h2>
-      <p class="mt-2 text-xs sm:text-sm text-slate-600 font-medium" data-aos="fade-up" data-aos-delay="100">
+      <p class="mt-2 text-sm sm:text-sm text-slate-600 font-normal" data-aos="fade-up" data-aos-delay="100">
         Nelamangala- Doddabalapura/Chikkabalapura Growth Corridor
       </p>
 
-      <!-- Decorative Line (Mobile Version Matching Design) -->
       <div class="flex items-center justify-center my-3 sm:hidden" data-aos="fade-in" data-aos-delay="150">
         <div class="h-px w-12 bg-blue-200"></div>
         <div class="w-2 h-2 rotate-45 bg-[#0066CC] mx-2"></div>
         <div class="h-px w-12 bg-blue-200"></div>
       </div>
 
-      <!-- Top Highlight Badge -->
       <div
-        class="mt-6 inline-block bg-[#0066CC] text-white rounded-2xl px-6 sm:px-12 py-3 sm:py-4 shadow-lg shadow-blue-500/20"
+        class="mt-6 inline-block bg-[#0066CC] text-white rounded-xl px-6 sm:px-12 py-3 sm:py-4 shadow-lg shadow-blue-500/20"
         data-aos="zoom-in-up" data-aos-delay="150">
-        <div class="text-sm sm:text-base font-bold">78% Growth in 3 Years</div>
-        <div class="text-xs sm:text-sm font-semibold opacity-95 mt-0.5">₹3,350 (2023) &rarr; ₹5,958 (2026)</div>
+        <div class="text-sm sm:text-base font-normal">78% Growth in 3 Years</div>
+        <div class="text-sm sm:text-sm font-normal opacity-95 mt-0.5">₹3,350 (2023) &rarr; ₹5,958 (2026)</div>
       </div>
 
-      <!-- Chart Container with Scroll Triggered Animation -->
       <div class="mt-10 " data-aos="fade-up" data-aos-delay="200" id="price-chart-card">
         <div class="relative w-full aspect-16/10 sm:aspect-21/9 max-h-95">
 
           <svg class="w-full h-full overflow-visible" viewBox="0 0 500 230">
             <defs>
-              <!-- Line Gradient -->
+
               <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
                 <stop offset="0%" stop-color="#3b82f6" />
                 <stop offset="100%" stop-color="#0066CC" />
               </linearGradient>
-              <!-- Area Glow Gradient -->
+
               <linearGradient id="areaGrad" x1="0%" y1="0%" x2="0%" y2="100%">
                 <stop offset="0%" stop-color="#0066CC" stop-opacity="0.18" />
                 <stop offset="100%" stop-color="#0066CC" stop-opacity="0.0" />
               </linearGradient>
             </defs>
 
-            <!-- Y-Axis Grid Lines & Labels -->
-            <g class="text-[11px] sm:text-xs fill-slate-400 font-sans">
+            <g class="text-[14px] sm:text-sm fill-slate-400 font-sans">
               <line x1="45" y1="30" x2="470" y2="30" stroke="#E2E8F0" stroke-width="1" />
               <text x="35" y="34" text-anchor="end">6,000</text>
 
@@ -847,7 +770,6 @@
               <text x="35" y="184" text-anchor="end">3,000</text>
             </g>
 
-            <!-- Axes with Arrowheads -->
             <line x1="45" y1="15" x2="45" y2="180" stroke="#334155" stroke-width="1.5" />
             <path d="M 42 18 L 45 10 L 48 18" fill="none" stroke="#334155" stroke-width="1.5" stroke-linecap="round"
               stroke-linejoin="round" />
@@ -856,27 +778,23 @@
             <path d="M 477 177 L 485 180 L 477 183" fill="none" stroke="#334155" stroke-width="1.5"
               stroke-linecap="round" stroke-linejoin="round" />
 
-            <!-- X-Axis Year Labels -->
-            <g class="text-[12px] fill-slate-700 font-bold font-sans">
+            <g class="text-[14px] fill-slate-700 font-normal font-sans">
               <text x="60" y="204" text-anchor="middle">2023</text>
               <text x="190" y="204" text-anchor="middle">2024</text>
               <text x="320" y="204" text-anchor="middle">2025</text>
               <text x="450" y="204" text-anchor="middle">2026</text>
             </g>
 
-            <!-- Animated Gradient Area Fill -->
             <path class="area-path" d="M 60 162.5 L 190 125 L 320 84 L 450 32.1 L 450 180 L 60 180 Z"
               fill="url(#areaGrad)" />
 
-            <!-- Animated Upward Line -->
             <path class="trend-line" d="M 60 162.5 L 190 125 L 320 84 L 450 32.1" fill="none" stroke="url(#lineGrad)"
               stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
 
-            <!-- Animated Data Points -->
             <g class="point-group" style="--delay: 0.2s">
               <circle cx="60" cy="162.5" r="4" fill="#0066CC" />
               <text x="60" y="150" text-anchor="middle"
-                class="text-[11px] sm:text-xs font-bold fill-[#0066CC]">₹3,350</text>
+                class="text-[14px] sm:text-sm font-normal fill-[#0066CC]">₹3,350</text>
             </g>
 
             <g class="point-group" style="--delay: 0.6s">
@@ -894,7 +812,7 @@
                 <animate attributeName="stroke-opacity" values="0.75;0.25;0.75" dur="2s" repeatCount="indefinite" />
               </circle>
               <text x="450" y="50" text-anchor="middle"
-                class="text-[11px] sm:text-xs font-bold fill-[#0066CC]">₹5,958</text>
+                class="text-[14px] sm:text-sm font-normal fill-[#0066CC]">₹5,958</text>
             </g>
           </svg>
 
@@ -904,32 +822,27 @@
     </div>
   </section>
 
-
-  <!-- invest -->
-  <section
+  <!-- INVESTMENT SECTION -->
+  <section id="invest"
     class="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-slate-900 py-12 lg:py-0">
 
-    <!-- Full Screen Aerial Background Image with Subtle Dark Overlay for Text Readability -->
     <div class="absolute inset-0 z-0">
       <img src="./assets/images/invest-opt.webp" alt="Aerial View of Zuari KinetiX Layout" loading="lazy"
         decoding="async" class="w-full h-full object-cover object-center" />
       <div class="absolute inset-0 bg-black/25"></div>
     </div>
 
-    <!-- Content Grid Container -->
     <div
       class="relative z-10 w-full container mx-auto px-4 py-4 flex flex-col lg:flex-row items-end justify-between gap-8 lg:gap-12">
 
-      <!-- Left Hero Text Content -->
       <div class="w-full lg:w-1/2 text-white text-center lg:text-left" data-aos="fade-right" data-aos-duration="750">
-        <h1 class="text-3xl sm:text-4xl md:text-5xl font-semibold tracking-tight leading-tight">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-normal tracking-tight leading-tight">
           Invest <br />
-          <span class="font-normal text-2xl sm:text-3xl md:text-4xl opacity-90">
+          <span class="font-normal text-3xl sm:text-4xl  md:text-4xl opacity-90">
             where Bangalore is growing next
           </span>
         </h1>
 
-        <!-- Horizontal Divider Line -->
         <div class="w-24 lg:w-32 h-px bg-white/40 my-6 mx-auto lg:mx-0"></div>
 
         <p class="text-sm sm:text-base md:text-lg text-slate-200 font-light max-w-lg mx-auto lg:mx-0 leading-relaxed">
@@ -938,72 +851,65 @@
         </p>
       </div>
 
-      <!-- Right Callback / Enquiry Form Box with Frosted Background Effect -->
       <div
-        class="w-full lg:w-100 rounded-xl p-6 sm:p-8 shadow-2xl border border-white/40 text-slate-800 bg-white bg-cover bg-center bg-no-repeat bg-bottom"
-        style="background-image: url('./assets/images/form-bg.webp');"
-        data-aos="fade-left" data-aos-duration="750" data-aos-delay="200">
-        <!-- Form Heading (Responsive Text based on Viewport) -->
+        class="w-full lg:w-100 rounded-lg p-6 sm:p-8 shadow-2xl border border-white/40 text-slate-800 bg-white bg-cover bg-center bg-no-repeat bg-bottom"
+        style="background-image: url('./assets/images/form-bg.webp');" data-aos="fade-left" data-aos-duration="750"
+        data-aos-delay="200">
+
         <div class="border-b border-slate-300 pb-3 mb-6">
-          <h3 class="text-xl sm:text-2xl font-bold text-[#0066CC]">
+          <h3 class="text-xl sm:text-2xl font-normal text-[#0066CC]">
             <span class="hidden sm:inline">Request A Callback!</span>
             <span class="inline sm:hidden">Enquiry Now !</span>
           </h3>
         </div>
 
         <form onsubmit="event.preventDefault();" class="space-y-4 text-left">
-          <!-- Full Name -->
+
           <div>
             <input type="text" placeholder="Full Name"
               class="w-full bg-transparent border-b border-slate-400 focus:border-[#0066CC] py-2 px-1 text-sm text-slate-800 placeholder-slate-500 focus:outline-none transition-colors"
               required />
           </div>
 
-          <!-- Phone Number -->
           <div>
             <input type="tel" placeholder="Phone Number"
               class="w-full bg-transparent border-b border-slate-400 focus:border-[#0066CC] py-2 px-1 text-sm text-slate-800 placeholder-slate-500 focus:outline-none transition-colors"
               required />
           </div>
 
-          <!-- WhatsApp Checkbox -->
           <div class="flex items-start gap-2 pt-1">
             <input type="checkbox" id="whatsapp-check"
               class="mt-1 h-3.5 w-3.5 rounded border-slate-400 text-[#0066CC] focus:ring-0 cursor-pointer" checked />
-            <label for="whatsapp-check" class="text-xs text-slate-600 cursor-pointer leading-tight">
+            <label for="whatsapp-check" class="text-sm text-slate-600 cursor-pointer leading-tight">
               Do you have WhatsApp activated on this number?
             </label>
           </div>
 
-          <!-- Email Address -->
           <div>
             <input type="email" placeholder="Email Address"
               class="w-full bg-transparent border-b border-slate-400 focus:border-[#0066CC] py-2 px-1 text-sm text-slate-800 placeholder-slate-500 focus:outline-none transition-colors"
               required />
           </div>
 
-          <!-- Preferred Time To Call -->
           <div>
             <input type="text" placeholder="Preferred Time To Call"
               class="w-full bg-transparent border-b border-slate-400 focus:border-[#0066CC] py-2 px-1 text-sm text-slate-800 placeholder-slate-500 focus:outline-none transition-colors" />
           </div>
 
-          <!-- Terms Agreement Checkbox -->
           <div class="flex items-start gap-2 pt-2">
             <input type="checkbox" id="terms-check"
               class="mt-1 h-3.5 w-3.5 rounded border-slate-400 text-[#0066CC] focus:ring-0 cursor-pointer" required
               checked />
-            <label for="terms-check" class="text-[10px] sm:text-[11px] text-slate-600 leading-snug cursor-pointer">
+            <label for="terms-check" class="text-[10px] sm:text-[14px] text-slate-600 leading-snug cursor-pointer">
               I agree to receive communications about Zuari KinetiX and accept the terms and conditions. I understand
               that by submitting this form, I may be contacted via phone, SMS, email, or WhatsApp for project updates
               and promotional offers. Your contact information will be kept confidential.
             </label>
           </div>
 
-          <!-- Submit Button -->
           <div class="pt-4">
             <button type="submit"
-              class="w-full bg-[#0066CC] hover:bg-[#0052A3] text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg active:scale-[0.99]">
+              class="w-full bg-[#0066CC] hover:bg-[#0052A3] text-white font-normal py-3 px-6 rounded-lg transition-all duration-300 shadow-md hover:shadow-lg active:scale-[0.99]">
               Submit
             </button>
           </div>
@@ -1013,53 +919,45 @@
     </div>
   </section>
 
-  <!-- gate img -->
-  <section class="py-12 md:py-16 bg-[#F8FAFC] relative overflow-hidden" data-aos="fade-up" data-aos-duration="800">
+  <!-- GATE OVERVIEW SECTION -->
+  <section class="py-10 md:py-12 bg-[#F8FAFC] relative overflow-hidden" data-aos="fade-up" data-aos-duration="800">
     <div class="container mx-auto px-0 sm:px-6">
 
-      <!-- Container Card with Marble/Light Background & Rounded Corners -->
       <div
-        class="relative bg-white border border-slate-200/80 rounded-none md:rounded-3xl overflow-hidden shadow-xl min-h-120 md:min-h-130 flex flex-col justify-between"
+        class="relative bg-white border border-slate-200/80 rounded-none md:rounded-2xl overflow-hidden shadow-xl min-h-120 md:min-h-130 flex flex-col justify-between"
         data-aos="zoom-in" data-aos-delay="100">
 
-        <!-- Text Overlay Content Container -->
         <div
           class="absolute z-20 top-22 md:top-20 left-20 md:left-80 lg:left-160 p-6 sm:p-8 md:p-10 max-w-md md:ml-auto"
           data-aos="fade-down" data-aos-delay="250">
 
-          <!-- Desktop Heading -->
-          <h2 class="hidden md:block text-2xl md:text-3xl font-semibold text-slate-800 tracking-tight leading-snug">
+          <h2 class="hidden md:block text-2xl md:text-3xl font-normal text-slate-800 tracking-tight leading-snug">
             Your Next Big Address Is Taking Shape
           </h2>
 
-          <!-- Mobile Heading -->
-          <h2 class="block md:hidden text-2xl font-semibold text-slate-800 tracking-tight leading-snug">
+          <h2 class="block md:hidden text-2xl font-normal text-slate-800 tracking-tight leading-snug">
             Premium Villa Plots In Doddaballapur
           </h2>
 
-          <!-- Desktop Description -->
           <p class="hidden md:block mt-3 text-sm text-slate-600 leading-relaxed font-normal">
             Premium plots in North Bangalore, surrounded by global aerospace presence, including suppliers serving
             Boeing, Airbus & Safran
           </p>
 
-          <!-- Mobile Description -->
-          <p class="block md:hidden mt-3 text-xs sm:text-sm text-slate-600 leading-relaxed font-normal">
+          <p class="block md:hidden mt-3 text-sm sm:text-sm text-slate-600 leading-relaxed font-normal">
             Located in North Bangalore's fastest-growing corridor, surrounded by a thriving aerospace ecosystem with
             suppliers serving Boeing, Airbus & Safran.
           </p>
 
-          <!-- Action Button (Desktop: Know More, Mobile: 360 Video View) -->
           <div class="mt-5">
-            <!-- Desktop Button -->
+
             <a href="#enquire"
-              class="hidden md:inline-flex items-center justify-center bg-[#0066CC] hover:bg-[#0052A3] text-white text-sm font-semibold py-2.5 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
+              class="hidden md:inline-flex items-center justify-center bg-[#0066CC] hover:bg-[#0052A3] text-white text-sm font-normal py-2.5 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300">
               Know More
             </a>
 
-            <!-- Mobile Button -->
             <a href="#video-tour"
-              class="inline-flex md:hidden items-center gap-2 bg-[#E59B00] hover:bg-[#CD8B00] text-white text-xs sm:text-sm font-semibold py-2.5 px-6 rounded-lg shadow-md transition-all duration-300">
+              class="inline-flex md:hidden items-center gap-2 bg-[#E59B00] hover:bg-[#CD8B00] text-white text-sm sm:text-sm font-normal py-2.5 px-6 rounded-lg shadow-md transition-all duration-300">
               <span>360 video view</span>
               <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24">
                 <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
@@ -1069,14 +967,12 @@
 
         </div>
 
-        <!-- Background Entrance Gate Images with Adaptive Positioning -->
         <div class="relative z-10 w-full mt-auto" data-aos="fade-up" data-aos-delay="200">
-          <!-- Desktop Full Gate Cutout -->
+
           <img loading="lazy" decoding="async" src="./assets/images/magnific_remove-sky-from-the-image_jUgiHWHLD0 1.png"
             alt="Zuari KinetiX Entrance Gate"
             class="hidden md:block w-full h-auto object-cover object-bottom select-none pointer-events-none" />
 
-          <!-- Mobile Vertical Gate Cutout -->
           <img loading="lazy" decoding="async"
             src="./assets/images/magnific_remove-sky-from-the-image_jUgiHWHLD0 1 (1).png"
             alt="Zuari KinetiX Entrance Arch Mobile"
@@ -1088,53 +984,46 @@
     </div>
   </section>
 
+  <!-- LUXURY FEATURES SECTION -->
+  <section class="container w-full mx-auto px-4 py-10 md:py-12">
 
-  <!-- luxury sction -->
-  <section class="container w-full mx-auto px-4 py-12 md:py-16">
-
-    <!-- Title Section -->
     <div class="text-center mb-8 sm:mb-12" data-aos="fade-down" data-aos-duration="800">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#1a1a1a] tracking-tight leading-tight">
-        The Art Of <span
-          class="bg-linear-to-r from-[#0052CC] to-[#00D2FF] bg-clip-text text-transparent">Effortless</span><br
+      <h2 class="text-3xl sm:text-4xl  font-normal text-[#1a1a1a] tracking-tight leading-tight">
+        The Art Of <span class="text-[#0073DB]">Effortless</span><br
           class="block sm:hidden" /> Luxury
       </h2>
 
-      <!-- Subtitle -->
       <p class="mt-4 text-slate-600 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
         Zuari KinetiX is built on thoughtfully planned infrastructure designed for long-term value and everyday ease.
       </p>
 
-      <!-- Decorative Line (Mobile Version Matching Design) -->
       <div class="flex items-center justify-center my-3 sm:hidden" data-aos="fade-in" data-aos-delay="150">
         <div class="h-px w-12 bg-blue-200"></div>
         <div class="w-2 h-2 rotate-45 bg-[#0066CC] mx-2"></div>
         <div class="h-px w-12 bg-blue-200"></div>
       </div>
 
-    <!-- Feature Infographic Image Container -->
-    <div class="flex justify-center items-center w-full mt-6" data-aos="zoom-in" data-aos-duration="750">
-      <!-- Desktop / Tablet Infographic -->
-      <img loading="lazy" decoding="async" src="./assets/images/circular.webp" alt="Zuari KinetiX Effortless Luxury Features"
-        class="hidden md:block w-full max-w-[800px] h-auto object-contain mx-auto" />
-      <!-- Mobile Portrait Infographic -->
-      <img loading="lazy" decoding="async" src="./assets/images/circular-phone.webp" alt="Zuari KinetiX Effortless Luxury Features"
-        class="block md:hidden w-full max-w-[350px] h-auto object-contain mx-auto" />
-    </div>
+      <div class="flex justify-center items-center w-full mt-6" data-aos="zoom-in" data-aos-duration="750">
+
+        <img loading="lazy" decoding="async" src="./assets/images/circular.webp"
+          alt="Zuari KinetiX Effortless Luxury Features"
+          class="hidden md:block w-full max-w-[800px] h-auto object-contain mx-auto" />
+
+        <img loading="lazy" decoding="async" src="./assets/images/circular-phone.webp"
+          alt="Zuari KinetiX Effortless Luxury Features"
+          class="block md:hidden w-full max-w-[350px] h-auto object-contain mx-auto" />
+      </div>
   </section>
 
-  <!-- project gallery -->
+  <!-- PROJECT GALLERY -->
 
-  <section class="container w-full mx-auto px-4 py-12 md:py-16">
+  <section id="gallery" class="container w-full mx-auto px-4 py-10 md:py-12">
 
-    <!-- Title Section -->
     <div class="text-center mb-10 sm:mb-12" data-aos="fade-down" data-aos-duration="800">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#1a1a1a] tracking-tight">
-        Project <span class="bg-linear-to-r from-[#0052CC] to-[#00D2FF] bg-clip-text text-transparent">Gallery</span>
+      <h2 class="text-3xl sm:text-4xl  font-normal text-[#1a1a1a] tracking-tight">
+        Project <span class="text-[#0073DB]">Gallery</span>
       </h2>
 
-
-       <!-- Decorative Line (Mobile Version Matching Design) -->
       <div class="flex items-center justify-center my-3 sm:hidden" data-aos="fade-in" data-aos-delay="150">
         <div class="h-px w-12 bg-blue-200"></div>
         <div class="w-2 h-2 rotate-45 bg-[#0066CC] mx-2"></div>
@@ -1142,371 +1031,298 @@
       </div>
     </div>
 
-
-
-    <!-- Gallery Navigation Tabs -->
     <div class="flex flex-wrap justify-center gap-2.5 sm:gap-4 my-6 md:my-8" data-aos="fade-up" data-aos-duration="800">
 
-      <!-- Tab 1: Play Zone -->
       <button id="galleryTabBtn1" onclick="switchGalleryTab(1)"
-        class="gallery-tab-btn active px-6 py-2.5 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 bg-linear-to-r from-[#0052CC] to-[#00D2FF] text-white shadow-md">
+        class="gallery-tab-btn active px-6 py-2.5 text-sm sm:text-sm font-normal rounded-lg transition-all duration-300 bg-[#0066CC] text-white shadow-md">
         Play Zone
       </button>
 
-      <!-- Tab 2: Wellness -->
       <button id="galleryTabBtn2" onclick="switchGalleryTab(2)"
-        class="gallery-tab-btn px-6 py-2.5 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 bg-slate-200 hover:bg-slate-300 text-slate-700">
+        class="gallery-tab-btn px-6 py-2.5 text-sm sm:text-sm font-normal rounded-lg transition-all duration-300 bg-slate-200 hover:bg-slate-300 text-slate-700">
         Wellness And Community Zone
       </button>
 
-      <!-- Tab 3: Clubhouse -->
       <button id="galleryTabBtn3" onclick="switchGalleryTab(3)"
-        class="gallery-tab-btn px-6 py-2.5 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 bg-slate-200 hover:bg-slate-300 text-slate-700">
+        class="gallery-tab-btn px-6 py-2.5 text-sm sm:text-sm font-normal rounded-lg transition-all duration-300 bg-slate-200 hover:bg-slate-300 text-slate-700">
         Clubhouse
       </button>
 
-      <!-- Tab 4: Landscape Views -->
       <button id="galleryTabBtn4" onclick="switchGalleryTab(4)"
-        class="gallery-tab-btn px-6 py-2.5 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 bg-slate-200 hover:bg-slate-300 text-slate-700">
+        class="gallery-tab-btn px-6 py-2.5 text-sm sm:text-sm font-normal rounded-lg transition-all duration-300 bg-slate-200 hover:bg-slate-300 text-slate-700">
         Landscape Views
       </button>
 
-      <!-- Tab 5: Infrastructure -->
       <button id="galleryTabBtn5" onclick="switchGalleryTab(5)"
-        class="gallery-tab-btn px-6 py-2.5 text-xs sm:text-sm font-semibold rounded-lg transition-all duration-300 bg-slate-200 hover:bg-slate-300 text-slate-700">
+        class="gallery-tab-btn px-6 py-2.5 text-sm sm:text-sm font-normal rounded-lg transition-all duration-300 bg-slate-200 hover:bg-slate-300 text-slate-700">
         Infrastructure
       </button>
 
     </div>
 
-    <!-- GALLERY CONTENT CONTAINER -->
-    <div class="relative w-full rounded-2xl bg-white p-4 sm:p-6" data-aos="zoom-in-up" data-aos-duration="800">
+    <div class="relative w-full rounded-xl bg-white p-4 sm:p-6" data-aos="zoom-in-up" data-aos-duration="800">
 
-      <!-- GALLERY CONTENT TABS -->
-
-      <!-- Tab 1 Grid Content (Play Zone) -->
-      <div id="galleryTab1Content" class="gallery-content-pane grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
+      <div id="galleryTab1Content"
+        class="gallery-content-pane grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
         data-aos-stagger="70">
 
-        <!-- Image Card 1 -->
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer" data-aos="fade-up"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer" data-aos="fade-up"
           data-aos-delay="100">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/play-1.webp"
-            alt="Adventure Play Area"
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/play-1.webp" alt="Adventure Play Area"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 ease-out group-hover:scale-110 group-hover:opacity-85" />
           <div
             class="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2 sm:p-4">
-            <span class="text-white text-xs sm:text-sm font-medium">Adventure Play Area</span>
+            <span class="text-white text-sm sm:text-sm font-normal">Adventure Play Area</span>
           </div>
         </div>
 
-        <!-- Image Card 2 -->
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer" data-aos="fade-up"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer" data-aos="fade-up"
           data-aos-delay="200">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/play-2.webp"
-            alt="Archery Range"
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/play-2.webp" alt="Archery Range"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 ease-out group-hover:scale-110 group-hover:opacity-85" />
           <div
             class="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2 sm:p-4">
-            <span class="text-white text-xs sm:text-sm font-medium">Archery Range</span>
+            <span class="text-white text-sm sm:text-sm font-normal">Archery Range</span>
           </div>
         </div>
 
-        <!-- Image Card 3 -->
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer" data-aos="fade-up"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer" data-aos="fade-up"
           data-aos-delay="300">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/play-3.webp"
-            alt="Rock Climbing Wall"
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/play-3.webp" alt="Rock Climbing Wall"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 ease-out group-hover:scale-110 group-hover:opacity-85" />
           <div
             class="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2 sm:p-4">
-            <span class="text-white text-xs sm:text-sm font-medium">Rock Climbing Wall</span>
+            <span class="text-white text-sm sm:text-sm font-normal">Rock Climbing Wall</span>
           </div>
         </div>
 
-        <!-- Image Card 4 -->
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer" data-aos="fade-up"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer" data-aos="fade-up"
           data-aos-delay="400">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/play-4.webp"
-            alt="Basketball Court"
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/play-4.webp" alt="Basketball Court"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 ease-out group-hover:scale-110 group-hover:opacity-85" />
           <div
             class="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2 sm:p-4">
-            <span class="text-white text-xs sm:text-sm font-medium">Basketball Court</span>
+            <span class="text-white text-sm sm:text-sm font-normal">Basketball Court</span>
           </div>
         </div>
 
-        <!-- Image Card 5 -->
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer" data-aos="fade-up"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer" data-aos="fade-up"
           data-aos-delay="100">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/play-5.webp"
-            alt="Cricket Practice Net"
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/play-5.webp" alt="Cricket Practice Net"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 ease-out group-hover:scale-110 group-hover:opacity-85" />
           <div
             class="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2 sm:p-4">
-            <span class="text-white text-xs sm:text-sm font-medium">Cricket Practice Net</span>
+            <span class="text-white text-sm sm:text-sm font-normal">Cricket Practice Net</span>
           </div>
         </div>
 
-        <!-- Image Card 6 -->
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer" data-aos="fade-up"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer" data-aos="fade-up"
           data-aos-delay="200">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/pikelball.webp"
-            alt="Pickleball Court"
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/pikelball.webp" alt="Pickleball Court"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 ease-out group-hover:scale-110 group-hover:opacity-85" />
           <div
             class="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2 sm:p-4">
-            <span class="text-white text-xs sm:text-sm font-medium">Pickleball Court</span>
+            <span class="text-white text-sm sm:text-sm font-normal">Pickleball Court</span>
           </div>
         </div>
 
-        <!-- Image Card 7 -->
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer" data-aos="fade-up"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer" data-aos="fade-up"
           data-aos-delay="300">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/bechvally-ball.webp"
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/bechvally-ball.webp"
             alt="Beach Volleyball Court"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 ease-out group-hover:scale-110 group-hover:opacity-85" />
           <div
             class="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2 sm:p-4">
-            <span class="text-white text-xs sm:text-sm font-medium">Beach Volleyball Court</span>
+            <span class="text-white text-sm sm:text-sm font-normal">Beach Volleyball Court</span>
           </div>
         </div>
 
-        <!-- Image Card 8 -->
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer" data-aos="fade-up"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer" data-aos="fade-up"
           data-aos-delay="400">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/football-inr.webp"
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/football-inr.webp"
             alt="Football Ground"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 ease-out group-hover:scale-110 group-hover:opacity-85" />
           <div
             class="absolute inset-0 bg-linear-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2 sm:p-4">
-            <span class="text-white text-xs sm:text-sm font-medium">Football Ground</span>
+            <span class="text-white text-sm sm:text-sm font-normal">Football Ground</span>
           </div>
         </div>
 
       </div>
 
-      <!-- Tab 2 Grid Content (Wellness) -->
       <div id="galleryTab2Content"
-        class="gallery-content-pane hidden grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6" data-aos-stagger="70">
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/wellness-1.webp"
+        class="gallery-content-pane hidden grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6"
+        data-aos-stagger="70">
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/wellness-1.webp"
             alt="Yoga and Meditation Deck"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/wellness-2.webp"
-            alt="Pet Park"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/wellness-2.webp" alt="Pet Park"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/wellness-3.webp"
-            alt="Yoga Deck"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/wellness-3.webp" alt="Yoga Deck"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/wellness-4.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/wellness-4.webp"
             alt="Landscaped Garden Walkway"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/wellness-6.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/wellness-6.webp"
             alt="Tree-Lined Walking Trail"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/wellness-7.webp"
-            alt="Outdoor Gym"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/wellness-7.webp" alt="Outdoor Gym"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/wellness-8.webp"
-            alt="Orchard Lawn"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/wellness-8.webp" alt="Orchard Lawn"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/wellness-10.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/wellness-10.webp"
             alt="Herb Garden with Fountain Seating"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
       </div>
 
-      <!-- Tab 3 Grid Content (Clubhouse) -->
       <div id="galleryTab3Content"
         class="gallery-content-pane hidden grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/club-1.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/club-1.webp"
             alt="Clubhouse Cafe Lounge"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/club-2.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/club-2.webp"
             alt="Swimming Pool with Poolside Deck"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/club-3.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/club-3.webp"
             alt="Indoor Games Room with Carrom"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/club-4.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/club-4.webp"
             alt="Aerobics and Zumba Studio"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/club-5.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/club-5.webp"
             alt="Foosball Table in Games Lounge"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/club-6.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/club-6.webp"
             alt="Fully Equipped Gymnasium"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/club-7.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/club-7.webp"
             alt="Multi-Cuisine Restaurant"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/club-8.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/club-8.webp"
             alt="Sports Bar and Lounge"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
       </div>
 
-      <!-- Tab 4 Grid Content (Landscape Views) -->
       <div id="galleryTab4Content"
         class="gallery-content-pane hidden grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/Landscape-1.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/Landscape-1.webp"
             alt="Tree-Lined Entrance Boulevard"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/Landscape-2.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/Landscape-2.webp"
             alt="Orchard Park Pathway"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/Landscape-3.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/Landscape-3.webp"
             alt="Central Boulevard with Sculpture"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/Landscape-4.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/Landscape-4.webp"
             alt="Aerial View of Clubhouse and Sports Courts"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/Landscape-5.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/Landscape-5.webp"
             alt="Clubhouse Night View"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/Landscape-6.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/Landscape-6.webp"
             alt="Aerial Master Layout View"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/Landscape-7.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/Landscape-7.webp"
             alt="Clubhouse Night Corner View"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/Landscape-8.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/Landscape-8.webp"
             alt="Clubhouse Illuminated Night View"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
       </div>
 
-      <!-- Tab 5 Grid Content (Infrastructure) -->
       <div id="galleryTab5Content"
         class="gallery-content-pane hidden grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/infrastructure-1.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/infrastructure-1.webp"
             alt="Clubhouse with Water Tower"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/infrastructure-2.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/infrastructure-2.webp"
             alt="Aerial View of Clubhouse and Plots"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/infrastructure-3.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/infrastructure-3.webp"
             alt="Grand Entrance Arch"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/infrastructure-4.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/infrastructure-4.webp"
             alt="Clubhouse Front Elevation"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/infrastructure-5.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/infrastructure-5.webp"
             alt="Clubhouse Corner View"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/infrastructure-6.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/infrastructure-6.webp"
             alt="Clubhouse Facade and Staircase"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/infrastructure-7.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/infrastructure-7.webp"
             alt="Tree-Lined Internal Roads"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/infrastructure-8.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/infrastructure-8.webp"
             alt="Entrance Plaza"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
-        <div class="group relative overflow-hidden rounded-2xl shadow-lg bg-slate-900 cursor-pointer">
-          <img loading="lazy" decoding="async"
-            src="./assets/images/zuari-gallry/infrastructure-9.webp"
+        <div class="group relative overflow-hidden rounded-xl shadow-lg bg-slate-900 cursor-pointer">
+          <img loading="lazy" decoding="async" src="./assets/images/zuari-gallry/infrastructure-9.webp"
             alt="Water Tower Structure"
             class="w-full h-32 sm:h-64 object-cover transition-all duration-700 group-hover:scale-110" />
         </div>
@@ -1516,17 +1332,14 @@
 
   </section>
 
-  <!-- why choose aminities -->
-  <section class="container md:mb-16 w-full mx-auto px-4 py-12 md:py-16">
+  <!-- WHY CHOOSE US -->
+  <section id="why-choose-us" class="container md:mb-16 w-full mx-auto px-4 py-10 md:py-12">
 
-    <!-- Title Section -->
     <div class="text-center mb-10 sm:mb-14" data-aos="fade-down" data-aos-duration="800">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#1a1a1a] tracking-tight leading-tight">
-        <span class="bg-linear-to-r from-[#0052CC] to-[#00D2FF] bg-clip-text text-transparent">Why Choose</span><br
-          class="block sm:hidden" /> Zuari Kinetix?
+      <h2 class="text-3xl sm:text-4xl  font-normal text-[#1a1a1a] tracking-tight leading-tight">
+        <span class="text-[#0073DB]">Why Choose</span><br class="block sm:hidden" /> Zuari Kinetix?
       </h2>
 
-       <!-- Decorative Line (Mobile Version Matching Design) -->
       <div class="flex items-center justify-center my-3 sm:hidden" data-aos="fade-in" data-aos-delay="150">
         <div class="h-px w-12 bg-blue-200"></div>
         <div class="w-2 h-2 rotate-45 bg-[#0066CC] mx-2"></div>
@@ -1534,84 +1347,76 @@
       </div>
     </div>
 
-    <!-- Features Grid (3 Columns on Desktop on Mobile matching screenshots) -->
-    <div class="grid grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-7xl mx-auto"
-      data-aos-stagger="80">
+    <div class="grid grid-cols-3 gap-2 lg:gap-4 max-w-7xl mx-auto" data-aos-stagger="80">
 
-      <!-- Card 1: Zuari's Trust -->
       <div data-aos="fade-up" data-aos-delay="100"
-        class="group bg-white rounded-2xl p-6 sm:p-8 flex flex-col items-center justify-center text-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100/80 transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,102,204,0.12)] hover:-translate-y-1.5 cursor-pointer">
+        class="group bg-white rounded-xl p-6 sm:p-8 flex flex-col items-center justify-center text-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100/80 transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,102,204,0.12)] hover:-translate-y-1.5 cursor-pointer">
         <div
           class="w-12 h-12 sm:w-20 sm:h-20 mb-4 sm:mb-6 text-[#0066cc] transition-transform duration-300 group-hover:scale-110">
           <img loading="lazy" decoding="async" src="./assets/images/handshake.png" alt="Zuari Logo"
             class="w-full h-full object-contain" />
         </div>
-        <h3 class="text-sm sm:text-xl font-semibold text-slate-700 group-hover:text-[#0066cc] transition-colors">
+        <h3 class="text-sm sm:text-xl font-normal text-slate-700 group-hover:text-[#0066cc] transition-colors">
           Zuari's<br class="block sm:hidden" /> Trust
         </h3>
       </div>
 
-      <!-- Card 2: Strategic Location -->
       <div data-aos="fade-up" data-aos-delay="200"
-        class="group bg-white rounded-2xl p-6 sm:p-8 flex flex-col items-center justify-center text-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100/80 transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,102,204,0.12)] hover:-translate-y-1.5 cursor-pointer">
+        class="group bg-white rounded-xl p-6 sm:p-8 flex flex-col items-center justify-center text-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100/80 transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,102,204,0.12)] hover:-translate-y-1.5 cursor-pointer">
         <div
           class="w-12 h-12 sm:w-20 sm:h-20 mb-4 sm:mb-6 text-[#0066cc] transition-transform duration-300 group-hover:scale-110">
           <img loading="lazy" decoding="async" src="./assets/images/map.png" alt="Strategic Location"
             class="w-full h-full object-contain" />
         </div>
-        <h3 class="text-sm sm:text-xl font-semibold text-slate-700 group-hover:text-[#0066cc] transition-colors">
+        <h3 class="text-sm sm:text-xl font-normal text-slate-700 group-hover:text-[#0066cc] transition-colors">
           Strategic<br class="block sm:hidden" /> Location
         </h3>
       </div>
 
-      <!-- Card 3: Quality Lifestyle -->
       <div data-aos="fade-up" data-aos-delay="300"
-        class="group bg-white rounded-2xl p-6 sm:p-8 flex flex-col items-center justify-center text-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100/80 transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,102,204,0.12)] hover:-translate-y-1.5 cursor-pointer">
+        class="group bg-white rounded-xl p-6 sm:p-8 flex flex-col items-center justify-center text-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100/80 transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,102,204,0.12)] hover:-translate-y-1.5 cursor-pointer">
         <div
           class="w-12 h-12 sm:w-20 sm:h-20 mb-4 sm:mb-6 text-[#0066cc] transition-transform duration-300 group-hover:scale-110">
           <img loading="lazy" decoding="async" src="./assets/images/growth-investing.png" alt="Quality Lifestyle"
             class="w-full h-full object-contain" />
         </div>
-        <h3 class="text-sm sm:text-xl font-semibold text-slate-700 group-hover:text-[#0066cc] transition-colors">
+        <h3 class="text-sm sm:text-xl font-normal text-slate-700 group-hover:text-[#0066cc] transition-colors">
           Quality<br class="block sm:hidden" /> Lifestyle
         </h3>
       </div>
 
-      <!-- Card 4: Safety & Security -->
       <div data-aos="fade-up" data-aos-delay="400"
-        class="group bg-white rounded-2xl p-6 sm:p-8 flex flex-col items-center justify-center text-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100/80 transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,102,204,0.12)] hover:-translate-y-1.5 cursor-pointer">
+        class="group bg-white rounded-xl p-6 sm:p-8 flex flex-col items-center justify-center text-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100/80 transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,102,204,0.12)] hover:-translate-y-1.5 cursor-pointer">
         <div
           class="w-12 h-12 sm:w-20 sm:h-20 mb-4 sm:mb-6 text-[#0066cc] transition-transform duration-300 group-hover:scale-110">
           <img loading="lazy" decoding="async" src="./assets/images/quality.png" alt="Safety & Security"
             class="w-full h-full object-contain" />
         </div>
-        <h3 class="text-sm sm:text-xl font-semibold text-slate-700 group-hover:text-[#0066cc] transition-colors">
+        <h3 class="text-sm sm:text-xl font-normal text-slate-700 group-hover:text-[#0066cc] transition-colors">
           Safety &<br class="block sm:hidden" /> Security
         </h3>
       </div>
 
-      <!-- Card 5: Growth Potential -->
       <div data-aos="fade-up" data-aos-delay="500"
-        class="group bg-white rounded-2xl p-6 sm:p-8 flex flex-col items-center justify-center text-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100/80 transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,102,204,0.12)] hover:-translate-y-1.5 cursor-pointer">
+        class="group bg-white rounded-xl p-6 sm:p-8 flex flex-col items-center justify-center text-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100/80 transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,102,204,0.12)] hover:-translate-y-1.5 cursor-pointer">
         <div
           class="w-12 h-12 sm:w-20 sm:h-20 mb-4 sm:mb-6 text-[#0066cc] transition-transform duration-300 group-hover:scale-110">
           <img loading="lazy" decoding="async" src="./assets/images/legal-document.png" alt="Growth Potential"
             class="w-full h-full object-contain" />
         </div>
-        <h3 class="text-sm sm:text-xl font-semibold text-slate-700 group-hover:text-[#0066cc] transition-colors">
+        <h3 class="text-sm sm:text-xl font-normal text-slate-700 group-hover:text-[#0066cc] transition-colors">
           Growth<br class="block sm:hidden" /> Potential
         </h3>
       </div>
 
-      <!-- Card 6: Legal Assurance -->
       <div data-aos="fade-up" data-aos-delay="600"
-        class="group bg-white rounded-2xl p-6 sm:p-8 flex flex-col items-center justify-center text-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100/80 transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,102,204,0.12)] hover:-translate-y-1.5 cursor-pointer">
+        class="group bg-white rounded-xl p-6 sm:p-8 flex flex-col items-center justify-center text-center shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-100/80 transition-all duration-300 hover:shadow-[0_20px_40px_rgba(0,102,204,0.12)] hover:-translate-y-1.5 cursor-pointer">
         <div
           class="w-12 h-12 sm:w-20 sm:h-20 mb-4 sm:mb-6 text-[#0066cc] transition-transform duration-300 group-hover:scale-110">
           <img loading="lazy" decoding="async" src="./assets/images/protection.png" alt="Legal Assurance"
             class="w-full h-full object-contain" />
         </div>
-        <h3 class="text-sm sm:text-xl font-semibold text-slate-700 group-hover:text-[#0066cc] transition-colors">
+        <h3 class="text-sm sm:text-xl font-normal text-slate-700 group-hover:text-[#0066cc] transition-colors">
           Legal<br class="block sm:hidden" /> Assurance
         </h3>
       </div>
@@ -1619,18 +1424,15 @@
     </div>
   </section>
 
+  <!-- WHY FAMILIES TRUST ZUARI INFRAWORLD -->
+  <section class="container w-full mx-auto px-4 py-10 md:py-12">
 
-  <!-- Why Families Trust Zuari Infraworld -->
-  <section class="container w-full mx-auto px-4 py-12 md:py-16">
-
-    <!-- Section Title -->
     <div class="text-center mb-16 sm:mb-20">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold text-[#1a1a1a] tracking-tight">
-        Why Families Trust <span class="bg-linear-to-r from-[#0052CC] to-[#00D2FF] bg-clip-text text-transparent">Zuari
+      <h2 class="text-3xl sm:text-4xl  font-normal text-[#1a1a1a] tracking-tight">
+        Why Families Trust <span class="text-[#0073DB]">Zuari
           Infraworld</span>
       </h2>
 
-       <!-- Decorative Line (Mobile Version Matching Design) -->
       <div class="flex items-center justify-center my-3 sm:hidden" data-aos="fade-in" data-aos-delay="150">
         <div class="h-px w-12 bg-blue-200"></div>
         <div class="w-2 h-2 rotate-45 bg-[#0066CC] mx-2"></div>
@@ -1638,83 +1440,64 @@
       </div>
     </div>
 
-    <!-- Desktop Version (hidden on mobile) -->
     <div class="trust-grid hidden md:grid grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-6 lg:gap-x-8">
 
-      <!-- Card 1 -->
-      <div
-        class="reveal-card group flex flex-col items-center text-center gap-4 p-6 rounded-3xl">
-        <div
-          class="animate-trust-float relative w-56 h-56 shrink-0">
+      <div class="reveal-card group flex flex-col items-center text-center gap-4 p-6 rounded-2xl">
+        <div class="animate-trust-float relative w-56 h-56 shrink-0">
           <img loading="lazy" decoding="async" src="./assets/images/infra.webp" alt="Core Values"
             class="w-full h-full object-contain drop-shadow-xl transition-transform duration-500 ease-out group-hover:scale-110 group-hover:rotate-3" />
         </div>
-        <p class="text-slate-600 text-base sm:text-lg font-medium leading-snug max-w-xs">
+        <p class="text-slate-600 text-base sm:text-lg font-normal leading-snug max-w-xs">
           Zuari Sports City, Dubai - A World Class Thriving Project.
         </p>
       </div>
 
-      <!-- Card 2 -->
-      <div
-        class="reveal-card group flex flex-col items-center text-center gap-4 p-6 rounded-3xl">
-        <div
-          class="animate-trust-float relative w-56 h-56 shrink-0">
+      <div class="reveal-card group flex flex-col items-center text-center gap-4 p-6 rounded-2xl">
+        <div class="animate-trust-float relative w-56 h-56 shrink-0">
           <img loading="lazy" decoding="async" src="./assets/images/infra.webp" alt="Core Values"
             class="w-full h-full object-contain drop-shadow-xl transition-transform duration-500 ease-out group-hover:scale-110 group-hover:rotate-3" />
         </div>
-        <p class="text-slate-600 text-base sm:text-lg font-medium leading-snug max-w-xs">
+        <p class="text-slate-600 text-base sm:text-lg font-normal leading-snug max-w-xs">
           Zuari Garden City, Mysuru - Thriving Resident Community With Proven Satisfaction
         </p>
       </div>
 
-      <!-- Card 3 -->
-      <div
-        class="reveal-card group flex flex-col items-center text-center gap-4 p-6 rounded-3xl">
-        <div
-          class="animate-trust-float relative w-56 h-56 shrink-0">
+      <div class="reveal-card group flex flex-col items-center text-center gap-4 p-6 rounded-2xl">
+        <div class="animate-trust-float relative w-56 h-56 shrink-0">
           <img loading="lazy" decoding="async" src="./assets/images/infra.webp" alt="Core Values"
             class="w-full h-full object-contain drop-shadow-xl transition-transform duration-500 ease-out group-hover:scale-110 group-hover:rotate-3" />
         </div>
-        <p class="text-slate-600 text-base sm:text-lg font-medium leading-snug max-w-xs">
+        <p class="text-slate-600 text-base sm:text-lg font-normal leading-snug max-w-xs">
           Zuari Rain Forest, Goa - Award- Winning Residential Project
         </p>
       </div>
 
-      <!-- Card 4 -->
-      <div
-        class="reveal-card group flex flex-col items-center text-center gap-4 p-6 rounded-3xl">
-        <div
-          class="animate-trust-float relative w-56 h-56 shrink-0">
+      <div class="reveal-card group flex flex-col items-center text-center gap-4 p-6 rounded-2xl">
+        <div class="animate-trust-float relative w-56 h-56 shrink-0">
           <img loading="lazy" decoding="async" src="./assets/images/infra.webp" alt="Core Values"
             class="w-full h-full object-contain drop-shadow-xl transition-transform duration-500 ease-out group-hover:scale-110 group-hover:rotate-3" />
         </div>
-        <p class="text-slate-600 text-base sm:text-lg font-medium leading-snug max-w-xs">
+        <p class="text-slate-600 text-base sm:text-lg font-normal leading-snug max-w-xs">
           St. Regis Residences, Dubai - Best International Architecture Award
         </p>
       </div>
 
-      <!-- Card 5 -->
-      <div
-        class="reveal-card group flex flex-col items-center text-center gap-4 p-6 rounded-3xl">
-        <div
-          class="animate-trust-float relative w-56 h-56 shrink-0">
+      <div class="reveal-card group flex flex-col items-center text-center gap-4 p-6 rounded-2xl">
+        <div class="animate-trust-float relative w-56 h-56 shrink-0">
           <img loading="lazy" decoding="async" src="./assets/images/infra.webp" alt="Core Values"
             class="w-full h-full object-contain drop-shadow-xl transition-transform duration-500 ease-out group-hover:scale-110 group-hover:rotate-3" />
         </div>
-        <p class="text-slate-600 text-base sm:text-lg font-medium leading-snug max-w-xs">
+        <p class="text-slate-600 text-base sm:text-lg font-normal leading-snug max-w-xs">
           Values: Trust, Excellence, Integrity, Sustainability, Customer-First
         </p>
       </div>
 
-      <!-- Card 6 -->
-      <div
-        class="reveal-card group flex flex-col items-center text-center gap-4 p-6 rounded-3xl">
-        <div
-          class="animate-trust-float relative w-56 h-56 shrink-0">
+      <div class="reveal-card group flex flex-col items-center text-center gap-4 p-6 rounded-2xl">
+        <div class="animate-trust-float relative w-56 h-56 shrink-0">
           <img loading="lazy" decoding="async" src="./assets/images/infra.webp" alt="Core Values"
             class="w-full h-full object-contain drop-shadow-xl transition-transform duration-500 ease-out group-hover:scale-110 group-hover:rotate-3" />
         </div>
-        <p class="text-slate-600 text-base sm:text-lg font-medium leading-snug max-w-xs">
+        <p class="text-slate-600 text-base sm:text-lg font-normal leading-snug max-w-xs">
           Values: Trust, Excellence, Integrity, Sustainability, Customer-First
         </p>
       </div>
@@ -1722,118 +1505,115 @@
     </div>
 
     <div class="block md:hidden bg-white pb-8 px-4 overflow-hidden" data-aos="fade-up" data-aos-duration="800">
-  <div class="max-w-md mx-auto space-y-8">
+      <div class="max-w-md mx-auto space-y-8">
 
-    <!-- Item 01 (Left Text, Right Image) -->
-    <div class="flex items-center justify-between gap-3" data-aos="fade-left" data-aos-delay="100">
-      <div class="w-3/5 text-left">
-        <div class="flex items-center gap-2 mb-1">
-          <span class="bg-[#0066CC] text-white text-[10px] font-bold px-1.5 py-0.5 rounded">01</span>
-          <h3 class="text-sm font-bold text-slate-800 leading-tight">Zuari Sports City, Dubai</h3>
+        <div class="flex items-center justify-between gap-3" data-aos="fade-left" data-aos-delay="100">
+          <div class="w-3/5 text-left">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="bg-[#0066CC] text-white text-[10px] font-normal px-1.5 py-0.5 rounded">01</span>
+              <h3 class="text-sm font-medium text-slate-800 leading-tight">Zuari Sports City, Dubai</h3>
+            </div>
+            <p class="text-[12px] text-slate-500 font-normal leading-snug">
+              A World Class Thriving Project.
+            </p>
+          </div>
+          <div class="w-2/5 shrink-0">
+            <img src="./assets/images/Rectangle-5085.png" alt="Zuari Sports City, Dubai"
+              class="w-full h-24 object-cover rounded-xl shadow-sm" />
+          </div>
         </div>
-        <p class="text-[11px] text-slate-500 font-normal leading-snug">
-          A World Class Thriving Project.
-        </p>
-      </div>
-      <div class="w-2/5 shrink-0">
-        <img src="./assets/images/Rectangle-5085.png" alt="Zuari Sports City, Dubai" class="w-full h-24 object-cover rounded-2xl shadow-sm" />
+
+        <div class="flex items-center justify-between gap-3" data-aos="fade-right" data-aos-delay="150">
+          <div class="w-2/5 shrink-0">
+            <img src="./assets/images/Rectangle 5085 (1).png" alt="Zuari Garden City, Mysuru"
+              class="w-full h-24 object-cover rounded-xl shadow-sm" />
+          </div>
+          <div class="w-3/5 text-right">
+            <div class="flex items-center justify-end gap-2 mb-1">
+              <h3 class="text-sm font-medium text-slate-800 leading-tight">Zuari Garden City, Mysuru</h3>
+              <span class="bg-[#0066CC] text-white text-[10px] font-normal px-1.5 py-0.5 rounded">02</span>
+            </div>
+            <p class="text-[12px] text-slate-500 font-normal leading-snug">
+              Thriving Resident Community With Proven Satisfaction
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between gap-3" data-aos="fade-left" data-aos-delay="200">
+          <div class="w-3/5 text-left">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="bg-[#0066CC] text-white text-[10px] font-normal px-1.5 py-0.5 rounded">03</span>
+              <h3 class="text-sm font-medium text-slate-800 leading-tight">Zuari Rain Forest, Goa</h3>
+            </div>
+            <p class="text-[12px] text-slate-500 font-normal leading-snug">
+              A World Class Thriving Project.
+            </p>
+          </div>
+          <div class="w-2/5 shrink-0">
+            <img src="./assets/images/Rectangle 5085 (2).png" alt="Zuari Rain Forest, Goa"
+              class="w-full h-24 object-cover rounded-xl shadow-sm" />
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between gap-3" data-aos="fade-right" data-aos-delay="250">
+          <div class="w-2/5 shrink-0">
+            <img src="./assets/images/Rectangle-5085-(3).png" alt="Zuari Garden City, Mysuru"
+              class="w-full h-24 object-cover rounded-xl shadow-sm" />
+          </div>
+          <div class="w-3/5 text-right">
+            <div class="flex items-center justify-end gap-2 mb-1">
+              <h3 class="text-sm font-medium text-slate-800 leading-tight">Zuari Garden City, Mysuru</h3>
+              <span class="bg-[#0066CC] text-white text-[10px] font-normal px-1.5 py-0.5 rounded">04</span>
+            </div>
+            <p class="text-[12px] text-slate-500 font-normal leading-snug">
+              Thriving Resident Community With Proven Satisfaction
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between gap-3" data-aos="fade-left" data-aos-delay="300">
+          <div class="w-3/5 text-left">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="bg-[#0066CC] text-white text-[10px] font-normal px-1.5 py-0.5 rounded">05</span>
+              <h3 class="text-sm font-medium text-slate-800 leading-tight">Zuari Rain Forest, Goa</h3>
+            </div>
+            <p class="text-[12px] text-slate-500 font-normal leading-snug">
+              A World Class Thriving Project.
+            </p>
+          </div>
+          <div class="w-2/5 shrink-0">
+            <img src="./assets/images/Rectangle-5085-(4).png" alt="Zuari Rain Forest, Goa"
+              class="w-full h-24 object-cover rounded-xl shadow-sm" />
+          </div>
+        </div>
+
+        <div class="flex items-center justify-between gap-3" data-aos="fade-right" data-aos-delay="350">
+          <div class="w-2/5 shrink-0">
+            <img src="./assets/images/Rectangle-5085-(5).png" alt="Zuari Garden City, Mysuru"
+              class="w-full h-24 object-cover rounded-xl shadow-sm" />
+          </div>
+          <div class="w-3/5 text-right">
+            <div class="flex items-center justify-end gap-2 mb-1">
+              <h3 class="text-sm font-medium text-slate-800 leading-tight">Zuari Garden City, Mysuru</h3>
+              <span class="bg-[#0066CC] text-white text-[10px] font-normal px-1.5 py-0.5 rounded">06</span>
+            </div>
+            <p class="text-[12px] text-slate-500 font-normal leading-snug">
+              Thriving Resident Community With Proven Satisfaction
+            </p>
+          </div>
+        </div>
+
       </div>
     </div>
-
-    <!-- Item 02 (Left Image, Right Text) -->
-    <div class="flex items-center justify-between gap-3" data-aos="fade-right" data-aos-delay="150">
-      <div class="w-2/5 shrink-0">
-        <img src="./assets/images/Rectangle 5085 (1).png" alt="Zuari Garden City, Mysuru" class="w-full h-24 object-cover rounded-2xl shadow-sm" />
-      </div>
-      <div class="w-3/5 text-right">
-        <div class="flex items-center justify-end gap-2 mb-1">
-          <h3 class="text-sm font-bold text-slate-800 leading-tight">Zuari Garden City, Mysuru</h3>
-          <span class="bg-[#0066CC] text-white text-[10px] font-bold px-1.5 py-0.5 rounded">02</span>
-        </div>
-        <p class="text-[11px] text-slate-500 font-normal leading-snug">
-          Thriving Resident Community With Proven Satisfaction
-        </p>
-      </div>
-    </div>
-
-    <!-- Item 03 (Left Text, Right Image) -->
-    <div class="flex items-center justify-between gap-3" data-aos="fade-left" data-aos-delay="200">
-      <div class="w-3/5 text-left">
-        <div class="flex items-center gap-2 mb-1">
-          <span class="bg-[#0066CC] text-white text-[10px] font-bold px-1.5 py-0.5 rounded">03</span>
-          <h3 class="text-sm font-bold text-slate-800 leading-tight">Zuari Rain Forest, Goa</h3>
-        </div>
-        <p class="text-[11px] text-slate-500 font-normal leading-snug">
-          A World Class Thriving Project.
-        </p>
-      </div>
-      <div class="w-2/5 shrink-0">
-        <img src="./assets/images/Rectangle 5085 (2).png" alt="Zuari Rain Forest, Goa" class="w-full h-24 object-cover rounded-2xl shadow-sm" />
-      </div>
-    </div>
-
-    <!-- Item 04 (Left Image, Right Text) -->
-    <div class="flex items-center justify-between gap-3" data-aos="fade-right" data-aos-delay="250">
-      <div class="w-2/5 shrink-0">
-        <img src="./assets/images/Rectangle-5085-(3).png" alt="Zuari Garden City, Mysuru" class="w-full h-24 object-cover rounded-2xl shadow-sm" />
-      </div>
-      <div class="w-3/5 text-right">
-        <div class="flex items-center justify-end gap-2 mb-1">
-          <h3 class="text-sm font-bold text-slate-800 leading-tight">Zuari Garden City, Mysuru</h3>
-          <span class="bg-[#0066CC] text-white text-[10px] font-bold px-1.5 py-0.5 rounded">04</span>
-        </div>
-        <p class="text-[11px] text-slate-500 font-normal leading-snug">
-          Thriving Resident Community With Proven Satisfaction
-        </p>
-      </div>
-    </div>
-
-    <!-- Item 05 (Left Text, Right Image) -->
-    <div class="flex items-center justify-between gap-3" data-aos="fade-left" data-aos-delay="300">
-      <div class="w-3/5 text-left">
-        <div class="flex items-center gap-2 mb-1">
-          <span class="bg-[#0066CC] text-white text-[10px] font-bold px-1.5 py-0.5 rounded">05</span>
-          <h3 class="text-sm font-bold text-slate-800 leading-tight">Zuari Rain Forest, Goa</h3>
-        </div>
-        <p class="text-[11px] text-slate-500 font-normal leading-snug">
-          A World Class Thriving Project.
-        </p>
-      </div>
-      <div class="w-2/5 shrink-0">
-        <img src="./assets/images/Rectangle-5085-(4).png" alt="Zuari Rain Forest, Goa" class="w-full h-24 object-cover rounded-2xl shadow-sm" />
-      </div>
-    </div>
-
-    <!-- Item 06 (Left Image, Right Text) -->
-    <div class="flex items-center justify-between gap-3" data-aos="fade-right" data-aos-delay="350">
-      <div class="w-2/5 shrink-0">
-        <img src="./assets/images/Rectangle-5085-(5).png" alt="Zuari Garden City, Mysuru" class="w-full h-24 object-cover rounded-2xl shadow-sm" />
-      </div>
-      <div class="w-3/5 text-right">
-        <div class="flex items-center justify-end gap-2 mb-1">
-          <h3 class="text-sm font-bold text-slate-800 leading-tight">Zuari Garden City, Mysuru</h3>
-          <span class="bg-[#0066CC] text-white text-[10px] font-bold px-1.5 py-0.5 rounded">06</span>
-        </div>
-        <p class="text-[11px] text-slate-500 font-normal leading-snug">
-          Thriving Resident Community With Proven Satisfaction
-        </p>
-      </div>
-    </div>
-
-  </div>
-</div>
   </section>
 
+  <section id="security" class="container w-full mx-auto py-12 px-4 reveal-section">
 
-  <section class="container w-full mx-auto py-12 px-4 reveal-section">
-
-    <!-- Title Section -->
     <div class="text-center mb-8 sm:mb-16">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-[#1a1a1a]">
-        Safety Security & <span class="text-[#0066cc]">Legalities</span>
+      <h2 class="text-3xl sm:text-4xl  font-normal tracking-tight text-[#1a1a1a]">
+        Safety Security & <span class="text-[#0073DB]">Legalities</span>
       </h2>
 
-       <!-- Decorative Line (Mobile Version Matching Design) -->
       <div class="flex items-center justify-center my-3 sm:hidden" data-aos="fade-in" data-aos-delay="150">
         <div class="h-px w-12 bg-blue-200"></div>
         <div class="w-2 h-2 rotate-45 bg-[#0066CC] mx-2"></div>
@@ -1841,135 +1621,116 @@
       </div>
     </div>
 
-    <!-- DESKTOP VIEW (Visible on lg screens and above) -->
     <div class="hidden lg:grid grid-cols-12 gap-0 items-center relative min-h-130">
 
-      <!-- Left Blue Card Container -->
-      <div class="col-span-4 bg-[#0060be] rounded-3xl p-8 lg:py-30 px-10 text-white shadow-xl relative z-10 my-auto">
-        <h3 class="text-2xl lg:text-2xl font-semibold mb-8 text-white tracking-wide">
+      <div class="col-span-4 bg-[#0060be] rounded-2xl p-8 lg:py-30 px-10 text-white shadow-xl relative z-10 my-auto">
+        <h3 class="text-2xl lg:text-2xl font-normal mb-8 text-white tracking-wide">
           Security Infrastructure
         </h3>
 
-        <!-- Stepper Component -->
         <div class="relative pl-6 space-y-8">
-          <!-- Connecting Line -->
+
           <div class="absolute left-1.25 top-2 bottom-2 w-[1.5px] bg-white/40"></div>
 
-          <!-- Step 1 -->
           <div class="relative flex items-start gap-4 group cursor-pointer">
             <span
               class="absolute left-[-23.5px] top-1.5 w-2.5 h-2.5 rounded-full bg-white transition-all duration-300 group-hover:scale-150 group-hover:bg-amber-300 shadow-sm"></span>
-            <p class="text-sm font-medium leading-snug text-white/95 group-hover:text-white transition-colors">
+            <p class="text-sm font-normal leading-snug text-white/95 group-hover:text-white transition-colors">
               Grand Entrance Plaza with Security Command Centre
             </p>
           </div>
 
-          <!-- Step 2 -->
           <div class="relative flex items-start gap-4 group cursor-pointer">
             <span
               class="absolute left-[-23.5px] top-1.5 w-2.5 h-2.5 rounded-full bg-white transition-all duration-300 group-hover:scale-150 group-hover:bg-amber-300 shadow-sm"></span>
-            <p class="text-sm font-medium leading-snug text-white/95 group-hover:text-white transition-colors">
+            <p class="text-sm font-normal leading-snug text-white/95 group-hover:text-white transition-colors">
               Gated community with controlled access points
             </p>
           </div>
 
-          <!-- Step 3 -->
           <div class="relative flex items-start gap-4 group cursor-pointer">
             <span
               class="absolute left-[-23.5px] top-1.5 w-2.5 h-2.5 rounded-full bg-white transition-all duration-300 group-hover:scale-150 group-hover:bg-amber-300 shadow-sm"></span>
-            <p class="text-sm font-medium leading-snug text-white/95 group-hover:text-white transition-colors">
+            <p class="text-sm font-normal leading-snug text-white/95 group-hover:text-white transition-colors">
               Dedicated waiting lounge for visitor management
             </p>
           </div>
 
-          <!-- Step 4 -->
           <div class="relative flex items-start gap-4 group cursor-pointer">
             <span
               class="absolute left-[-23.5px] top-1.5 w-2.5 h-2.5 rounded-full bg-white transition-all duration-300 group-hover:scale-150 group-hover:bg-amber-300 shadow-sm"></span>
-            <p class="text-sm font-medium leading-snug text-white/95 group-hover:text-white transition-colors">
+            <p class="text-sm font-normal leading-snug text-white/95 group-hover:text-white transition-colors">
               24/7 surveillance and security personnel
             </p>
           </div>
         </div>
       </div>
 
-      <!-- Right Stacked Images Area -->
       <div class="col-span-7 relative h-120 -ml-12">
-        <!-- Top Right Background Image (Night Scene) -->
+
         <div
-          class="absolute -top-10 right-20 z-20 w-[92%] rounded-3xl overflow-hidden shadow-xl border-2 border-white group cursor-pointer transition-all duration-500 hover:z-30 hover:scale-[1.02]">
+          class="absolute -top-10 right-20 z-20 w-[92%] rounded-2xl overflow-hidden shadow-xl border-2 border-white group cursor-pointer transition-all duration-500 hover:z-30 hover:scale-[1.02]">
           <img loading="lazy" decoding="async" src="./assets/images/safty.jpg" alt="Night Community Infrastructure"
             class="w-full h-90 object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
         </div>
 
-        <!-- Bottom Overlapping Image (Entrance Gate) -->
         <div
-          class="absolute -bottom-10 left-16 w-[60%] rounded-3xl overflow-hidden shadow-2xl border-4 border-white z-20 group cursor-pointer transition-all duration-500 hover:scale-[1.02]">
-          <img loading="lazy" decoding="async" src="./assets/images/safty-2.jpg"
-            alt="Grand Entrance Plaza"
+          class="absolute -bottom-10 left-16 w-[60%] rounded-2xl overflow-hidden shadow-2xl border-4 border-white z-20 group cursor-pointer transition-all duration-500 hover:scale-[1.02]">
+          <img loading="lazy" decoding="async" src="./assets/images/safty-2.jpg" alt="Grand Entrance Plaza"
             class="w-full h-70 object-cover transition-transform duration-700 ease-out group-hover:scale-110" />
         </div>
       </div>
 
     </div>
 
-    <!-- MOBILE / TABLET VIEW (Matching Mobile Screenshot Layout) -->
     <div class="flex flex-col lg:hidden max-w-md mx-auto">
 
-      <!-- Top Image (Night Scene) -->
       <div class="w-full rounded-t-[20px] overflow-hidden shadow-md group cursor-pointer">
-        <img loading="lazy" decoding="async" src="./assets/images/image-2.webp"
-          alt="Night Community Infrastructure"
+        <img loading="lazy" decoding="async" src="./assets/images/image-2.webp" alt="Night Community Infrastructure"
           class="w-full h-55 sm:h-70 object-cover transition-transform duration-700 group-hover:scale-105" />
       </div>
 
-      <!-- Blue Stepper Box (Overlaps Top & Bottom Images) -->
-      <div class="bg-[#0060be] -mt-6 rounded-3xl p-6 text-white shadow-xl relative z-10 text-center">
-        <h3 class="text-xl sm:text-2xl font-bold mb-6 text-white tracking-wide">
+      <div class="bg-[#0060be] -mt-6 rounded-2xl p-6 text-white shadow-xl relative z-10 text-center">
+        <h3 class="text-xl sm:text-2xl font-normal mb-6 text-white tracking-wide">
           Security Infrastructure
         </h3>
 
-        <!-- Stepper Component -->
         <div class="relative pl-6 space-y-6 text-left">
-          <!-- Connecting Line -->
+
           <div class="absolute left-1.25 top-2 bottom-2 w-[1.5px] bg-white/40"></div>
 
-          <!-- Step 1 -->
           <div class="relative flex items-start gap-3 group">
             <span class="absolute left-[-23.5px] top-1.5 w-2.5 h-2.5 rounded-full bg-white shadow-sm"></span>
-            <p class="text-xs sm:text-sm font-normal leading-relaxed text-white/95">
+            <p class="text-sm sm:text-sm font-normal leading-relaxed text-white/95">
               Grand Entrance Plaza with Security Command Centre
             </p>
           </div>
 
-          <!-- Step 2 -->
           <div class="relative flex items-start gap-3 group">
             <span class="absolute left-[-23.5px] top-1.5 w-2.5 h-2.5 rounded-full bg-white shadow-sm"></span>
-            <p class="text-xs sm:text-sm font-normal leading-relaxed text-white/95">
+            <p class="text-sm sm:text-sm font-normal leading-relaxed text-white/95">
               Gated community with controlled access points
             </p>
           </div>
 
-          <!-- Step 3 -->
           <div class="relative flex items-start gap-3 group">
             <span class="absolute left-[-23.5px] top-1.5 w-2.5 h-2.5 rounded-full bg-white shadow-sm"></span>
-            <p class="text-xs sm:text-sm font-normal leading-relaxed text-white/95">
+            <p class="text-sm sm:text-sm font-normal leading-relaxed text-white/95">
               Dedicated waiting lounge for visitor management
             </p>
           </div>
 
-          <!-- Step 4 -->
           <div class="relative flex items-start gap-3 group">
             <span class="absolute left-[-23.5px] top-1.5 w-2.5 h-2.5 rounded-full bg-white shadow-sm"></span>
-            <p class="text-xs sm:text-sm font-normal leading-relaxed text-white/95">
+            <p class="text-sm sm:text-sm font-normal leading-relaxed text-white/95">
               24/7 surveillance and security personnel
             </p>
           </div>
         </div>
 
-        <!-- Bottom Embedded Entrance Image inside Blue Card -->
         <div class="mt-6 rounded-[18px] overflow-hidden border-2 border-white shadow-lg group cursor-pointer">
-          <img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop"
+          <img loading="lazy" decoding="async"
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1000&auto=format&fit=crop"
             alt="Grand Entrance Plaza"
             class="w-full h-40 sm:h-50 object-cover transition-transform duration-700 group-hover:scale-105" />
         </div>
@@ -1979,16 +1740,14 @@
 
   </section>
 
-  <!-- About us -->
-  <section class="container w-full mx-auto px-4 reveal py-12 md:py-16">
+  <!-- ABOUT US SECTION -->
+  <section id="about-us" class="container w-full mx-auto px-4 reveal py-10 md:py-12">
 
-    <!-- Section Title -->
     <div class="text-center mb-10">
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-semibold tracking-tight text-slate-900">
+      <h2 class="text-3xl sm:text-4xl  font-normal tracking-tight text-slate-900">
         About Us
       </h2>
 
-       <!-- Decorative Line (Mobile Version Matching Design) -->
       <div class="flex items-center justify-center my-3 sm:hidden" data-aos="fade-in" data-aos-delay="150">
         <div class="h-px w-12 bg-blue-200"></div>
         <div class="w-2 h-2 rotate-45 bg-[#0066CC] mx-2"></div>
@@ -1996,11 +1755,10 @@
       </div>
     </div>
 
-    <!-- Tab Buttons -->
     <div class="flex justify-center items-center gap-4 mb-14">
       <button id="tab1Btn" onclick="switchTab(1)"
-        class="tab-btn active flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 shadow-md bg-sky-600 text-white hover:bg-sky-700 hover:shadow-lg focus:outline-none">
-        <!-- Building SVG Icon -->
+        class="tab-btn active flex items-center gap-2.5 px-6 py-3.5 rounded-lg font-normal text-sm sm:text-base transition-all duration-300 shadow-md bg-sky-600 text-white hover:bg-sky-700 hover:shadow-lg focus:outline-none">
+
         <svg class="w-5 h-5 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor"
           viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -2010,8 +1768,8 @@
       </button>
 
       <button id="tab2Btn" onclick="switchTab(2)"
-        class="tab-btn flex items-center gap-2.5 px-6 py-3.5 rounded-xl font-semibold text-sm sm:text-base transition-all duration-300 bg-slate-200/80 text-slate-700 hover:bg-slate-300 hover:text-slate-900 hover:shadow-md focus:outline-none">
-        <!-- Briefcase SVG Icon -->
+        class="tab-btn flex items-center gap-2.5 px-6 py-3.5 rounded-lg font-normal text-sm sm:text-base transition-all duration-300 bg-slate-200/80 text-slate-700 hover:bg-slate-300 hover:text-slate-900 hover:shadow-md focus:outline-none">
+
         <svg class="w-5 h-5 transition-transform duration-300 group-hover:scale-110" fill="none" stroke="currentColor"
           viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -2021,19 +1779,18 @@
       </button>
     </div>
 
-    <!-- TAB 1 CONTENT -->
     <div id="tab1Content" class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center transition-all duration-500">
-      <!-- Left Text -->
+
       <div class="lg:col-span-6 space-y-6">
         <div class="relative inline-block">
-          <h3 class="text-2xl sm:text-3xl font-semibold text-slate-900 leading-tight">
+          <h3 class="text-3xl sm:text-4xl  font-normal text-slate-900 leading-tight">
             The Legacy of <span
-              class="bg-linear-to-r from-[#0052CC] to-[#00D2FF] bg-clip-text text-transparent relative">Zuari<span
+              class="text-[#0052cc] relative">Zuari<span
                 class="absolute -bottom-2 left-0 w-full h-1 bg-sky-600 rounded-full"></span></span>
           </h3>
         </div>
         <p class="text-slate-600 text-base sm:text-lg leading-relaxed pt-2">
-          <strong class="font-semibold text-slate-800">Zuari Infraworld India Limited (ZIIL)</strong> is the dedicated
+          <strong class="font-normal text-slate-800">Zuari Infraworld India Limited (ZIIL)</strong> is the dedicated
           real estate arm of Zuari Industries Limited, part of the esteemed KK Birla Group, carrying forward a legacy
           that is deeply interwoven with India's growth story. Rooted in the visionary leadership of the late Dr. K. K.
           Birla, whose pioneering contributions helped shape key sectors of the nation, and guided today by eminent
@@ -2042,23 +1799,19 @@
         </p>
       </div>
 
-      <!-- Right Video -->
       <div class="lg:col-span-6 pr-5 pb-5">
         <div class="relative group">
 
-          <!-- BLUE PATCH BEHIND THE VIDEO -->
           <div class="absolute -right-4 -bottom-4 top-6 left-6 bg-[#0066cc] z-0"></div>
 
-          <!-- MAIN VIDEO PLAYER -->
-          <div id="videoWrap1" class="relative z-10 bg-black overflow-hidden border border-slate-200/20 aspect-video cursor-pointer">
-            <video id="video1" class="w-full h-full object-cover" preload="none"
-              playsinline poster="./assets/images/abt-video.webp">
-              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
-                type="video/mp4" />
+          <div id="videoWrap1" onclick="togglePlay(1)"
+            class="relative z-10 bg-black overflow-hidden border border-slate-200/20 aspect-video cursor-pointer">
+            <video id="video1" class="w-full h-full object-cover" preload="none" playsinline
+              poster="./assets/images/abt-video.webp">
+              <source src="./assets/video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 
-            <!-- Play Button Overlay -->
             <div id="playBtn1"
               class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/20 transition-all duration-300">
               <div
@@ -2074,42 +1827,39 @@
       </div>
     </div>
 
-    <!-- TAB 2 CONTENT (Hidden by default) -->
     <div id="tab2Content"
       class="hidden grid grid-cols-1 lg:grid-cols-12 gap-12 items-center transition-all duration-500">
-      <!-- Left Text -->
+
       <div class="lg:col-span-6 space-y-6">
         <div class="relative inline-block">
-          <h3 class="text-2xl sm:text-3xl font-semibold text-slate-900 leading-tight">
+          <h3 class="text-3xl sm:text-4xl  font-normal text-slate-900 leading-tight">
             Innovating with <span
-              class="bg-linear-to-r from-[#0052CC] to-[#00D2FF] bg-clip-text text-transparent relative">SSK
+              class="text-[#0052cc] relative">SSK
               Infinity<span class="absolute -bottom-2 left-0 w-full h-1 bg-sky-600 rounded-full"></span></span>
           </h3>
         </div>
         <p class="text-slate-600 text-base sm:text-lg leading-relaxed pt-2">
-          <strong class="font-semibold text-slate-800">SSK Infinity Ventures</strong> represents modern enterprise,
+          <strong class="font-normal text-slate-800">SSK Infinity Ventures</strong> represents modern enterprise,
           forward-thinking infrastructure, and sustainable real estate ventures. We focus on modern architectural
           solutions, high-yield commercial hubs, and luxurious residential developments designed to elevate lifestyle
           and modern living standards across top Indian metros.
         </p>
       </div>
 
-      <!-- Right Video -->
       <div class="lg:col-span-6 pr-4 pb-4">
         <div class="relative group">
-          <!-- Blue Offset Accent Border (Exact matching layout from screenshot) -->
+
           <div class="absolute -right-3.5 -bottom-3.5 top-3.5 left-3.5 bg-[#0066cc] z-0 transition-all duration-300">
           </div>
 
-          <div id="videoWrap2" class="relative z-10 bg-black overflow-hidden border border-slate-200/20 aspect-video cursor-pointer">
-            <video id="video2" class="w-full h-full object-cover" preload="none"
-              playsinline poster="./assets/images/abt-video.webp">
-              <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4"
-                type="video/mp4" />
+          <div id="videoWrap2" onclick="togglePlay(2)"
+            class="relative z-10 bg-black overflow-hidden border border-slate-200/20 aspect-video cursor-pointer">
+            <video id="video2" class="w-full h-full object-cover" preload="none" playsinline
+              poster="./assets/images/abt-video.webp">
+              <source src="./assets/video.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
 
-            <!-- Play Button Overlay -->
             <div id="playBtn2"
               class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/20 transition-all duration-300">
               <div
@@ -2126,86 +1876,76 @@
 
   </section>
 
+  <footer class="bg-[#333333] text-white py-8 px-4 font-sans" data-aos="fade-up" data-aos-duration="600">
+    <div class="max-w-6xl mx-auto flex flex-col items-center">
 
-<footer class="bg-[#333333] text-white py-8 px-4 font-sans" data-aos="fade-up" data-aos-duration="600">
-  <div class="max-w-6xl mx-auto flex flex-col items-center">
+      <p class="text-sm sm:text-base text-gray-200 tracking-wide text-center">
+        Copyright@zuarikinetix.com2026
+      </p>
 
-    <!-- Copyright Text -->
-    <p class="text-sm sm:text-base text-gray-200 tracking-wide text-center">
-      Copyright@zuarikinetix.com2026
-    </p>
+      <div class="w-full max-w-xl h-[1px] bg-gray-400/50 my-6"></div>
 
-    <!-- Horizontal Divider -->
-    <div class="w-full max-w-xl h-[1px] bg-gray-400/50 my-6"></div>
+      <nav class="w-full">
+        <ul
+          class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-12 md:gap-16 text-sm sm:text-base text-gray-200">
+          <li>
+            <a href="#disclaimer"
+              class="inline-flex items-center gap-2 hover:text-white transition-colors duration-200 group">
+              <span class="text-sm transition-transform duration-200 group-hover:translate-x-0.5">&rarr;</span>
+              <span>Disclaimer</span>
+            </a>
+          </li>
+          <li>
+            <a href="#terms"
+              class="inline-flex items-center gap-2 hover:text-white transition-colors duration-200 group">
+              <span class="text-sm transition-transform duration-200 group-hover:translate-x-0.5">&rarr;</span>
+              <span>Terms & Conditions</span>
+            </a>
+          </li>
+          <li>
+            <a href="#privacy"
+              class="inline-flex items-center gap-2 hover:text-white transition-colors duration-200 group">
+              <span class="text-sm transition-transform duration-200 group-hover:translate-x-0.5">&rarr;</span>
+              <span>Privacy Policy</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
 
-    <!-- Footer Links Navigation -->
-    <nav class="w-full">
-      <ul class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-12 md:gap-16 text-sm sm:text-base text-gray-200">
-        <li>
-          <a href="#disclaimer" class="inline-flex items-center gap-2 hover:text-white transition-colors duration-200 group">
-            <span class="text-xs transition-transform duration-200 group-hover:translate-x-0.5">&rarr;</span>
-            <span>Disclaimer</span>
-          </a>
-        </li>
-        <li>
-          <a href="#terms" class="inline-flex items-center gap-2 hover:text-white transition-colors duration-200 group">
-            <span class="text-xs transition-transform duration-200 group-hover:translate-x-0.5">&rarr;</span>
-            <span>Terms & Conditions</span>
-          </a>
-        </li>
-        <li>
-          <a href="#privacy" class="inline-flex items-center gap-2 hover:text-white transition-colors duration-200 group">
-            <span class="text-xs transition-transform duration-200 group-hover:translate-x-0.5">&rarr;</span>
-            <span>Privacy Policy</span>
-          </a>
-        </li>
-      </ul>
-    </nav>
-
-  </div>
-</footer>
-
-
-
+    </div>
+  </footer>
 
   <!-- FULLSCREEN VIDEO MODAL POP-UP -->
   <div id="videoModal"
     class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300">
     <div
-      class="relative w-full max-w-4xl bg-black rounded-2xl overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300"
+      class="relative w-full max-w-4xl bg-black rounded-xl overflow-hidden shadow-2xl transform scale-95 transition-transform duration-300"
       id="videoModalCard">
 
-      <!-- Close Button -->
       <button onclick="closeVideoModal()"
-        class="absolute top-3 right-3 z-10 text-white/80 hover:text-white bg-black/50 hover:bg-black/80 p-2 rounded-full backdrop-blur-sm transition-colors">
+        class="absolute top-3 right-3 z-20 text-white/80 hover:text-white bg-black/50 hover:bg-black/80 p-2 rounded-full backdrop-blur-sm transition-colors">
         <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
 
-      <!-- Modal Video Element -->
-      <div class="aspect-video w-full">
-        <iframe id="modalVideoPlayer" class="w-full h-full" src="" title="360 Virtual Site Tour" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen>
-        </iframe>
+      <div class="aspect-video w-full flex items-center justify-center bg-black">
+        <video id="modalVideoPlayer" class="w-full h-full object-contain" controls playsinline>
+          <source src="./assets/video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
       </div>
 
     </div>
   </div>
 
-
-
-
   <!-- ENQUIRY FORM MODAL POPUP -->
   <div id="planModal"
     class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/70 backdrop-blur-sm opacity-0 pointer-events-none transition-all duration-300">
     <div
-      class="rounded-2xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative transform scale-95 transition-all duration-300 bg-white bg-cover bg-center bg-no-repeat bg-bottom"
-      style="background-image: url('./assets/images/form-bg.webp');"
-      id="planModalContent">
+      class="rounded-xl max-w-md w-full p-6 sm:p-8 shadow-2xl relative transform scale-95 transition-all duration-300 bg-white bg-cover bg-center bg-no-repeat bg-bottom"
+      style="background-image: url('./assets/images/form-bg.webp');" id="planModalContent">
 
-      <!-- Close Modal Button -->
       <button onclick="closePlanModal()"
         class="absolute top-4 right-4 text-slate-400 hover:text-slate-700 bg-slate-100 hover:bg-slate-200 p-2 rounded-full transition-colors">
         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -2213,37 +1953,36 @@
         </svg>
       </button>
 
-      <!-- Modal Form Header -->
       <h3 id="modal-form-title"
-        class="text-2xl font-bold bg-linear-to-r from-[#0052CC] to-[#00D2FF] bg-clip-text text-transparent pb-2 border-b border-blue-100">
+        class="text-2xl font-normal text-[#0052cc] pb-2 border-b border-blue-100">
         Enquire For Master Plan
       </h3>
 
       <form class="mt-5 space-y-4 text-left" onsubmit="event.preventDefault(); closePlanModal();">
         <div>
           <input type="text" required placeholder="Full Name"
-            class="w-full pb-2 border-b border-slate-300 focus:border-[#0052CC] focus:outline-none text-sm bg-transparent placeholder-slate-400 font-medium" />
+            class="w-full pb-2 border-b border-slate-300 focus:border-[#0052CC] focus:outline-none text-sm bg-transparent placeholder-slate-400 font-normal" />
         </div>
 
         <div>
           <input type="tel" required placeholder="Phone Number"
-            class="w-full pb-2 border-b border-slate-300 focus:border-[#0052CC] focus:outline-none text-sm bg-transparent placeholder-slate-400 font-medium" />
+            class="w-full pb-2 border-b border-slate-300 focus:border-[#0052CC] focus:outline-none text-sm bg-transparent placeholder-slate-400 font-normal" />
         </div>
 
         <div class="flex items-center gap-2 pt-1">
           <input type="checkbox" id="modal-whatsapp" class="rounded text-[#0052CC] focus:ring-[#0052CC] w-3.5 h-3.5" />
-          <label for="modal-whatsapp" class="text-[11px] text-slate-600 font-medium">Do you have WhatsApp activated on
+          <label for="modal-whatsapp" class="text-[14px] text-slate-600 font-normal">Do you have WhatsApp activated on
             this number?</label>
         </div>
 
         <div>
           <input type="email" required placeholder="Email Address"
-            class="w-full pb-2 border-b border-slate-300 focus:border-[#0052CC] focus:outline-none text-sm bg-transparent placeholder-slate-400 font-medium" />
+            class="w-full pb-2 border-b border-slate-300 focus:border-[#0052CC] focus:outline-none text-sm bg-transparent placeholder-slate-400 font-normal" />
         </div>
 
         <div>
           <input type="text" placeholder="Preferred Time To Call"
-            class="w-full pb-2 border-b border-slate-300 focus:border-[#0052CC] focus:outline-none text-xs sm:text-sm bg-transparent placeholder-slate-400 font-medium" />
+            class="w-full pb-2 border-b border-slate-300 focus:border-[#0052CC] focus:outline-none text-sm sm:text-sm bg-transparent placeholder-slate-400 font-normal" />
         </div>
 
         <div class="flex items-start gap-2 pt-2">
@@ -2257,7 +1996,7 @@
         </div>
 
         <button type="submit"
-          class="w-full py-3.5 mt-4 bg-linear-to-r from-[#0066CC] to-[#00A3FF] hover:from-[#0052CC] hover:to-[#0088FF] text-white font-bold rounded-xl text-sm shadow-lg shadow-blue-600/30 transition-all active:scale-95">
+          class="w-full py-3.5 mt-4 bg-linear-to-r from-[#0066CC] to-[#00A3FF] hover:from-[#0052CC] hover:to-[#0088FF] text-white font-normal rounded-lg text-sm shadow-lg shadow-blue-600/30 transition-all active:scale-95">
           Unlock Full Plan Details
         </button>
       </form>
@@ -2268,12 +2007,14 @@
   <!-- STICKY RIGHT SIDEBAR (Mobile) -->
   <div class="fixed right-0 top-1/2 -translate-y-1/2 z-[100] flex flex-col gap-[1px]">
 
-    <!-- Button 1: Questions -->
-    <div id="plan-modal-btn" onclick="openPlanModal()" class="bg-[#005bc4] text-white py-3 px-1.5 rounded-l-sm flex flex-col items-center justify-center gap-3 cursor-pointer hover:bg-[#004a9e] transition-colors shadow-lg border border-r-0 border-white/20">
-      <span class="text-[13px] font-medium tracking-wide whitespace-nowrap" style="writing-mode: vertical-rl; transform: rotate(180deg);">
+    <div onclick="openSideMenu()"
+      class="bg-[#005bc4] text-white py-3 px-1.5 rounded-l-sm flex flex-col items-center justify-center gap-3 cursor-pointer hover:bg-[#004a9e] transition-colors shadow-lg border border-r-0 border-white/20">
+      <span class="text-[13px] font-normal tracking-wide whitespace-nowrap"
+        style="writing-mode: vertical-rl; transform: rotate(180deg);">
         Questions before buying a plot
       </span>
-      <svg class="w-5 h-5 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <svg class="w-5 h-5 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="12" r="10"></circle>
         <line x1="8.5" y1="8" x2="8.5" y2="16"></line>
         <line x1="12" y1="8" x2="12" y2="16"></line>
@@ -2281,12 +2022,14 @@
       </svg>
     </div>
 
-    <!-- Button 2: Master Plan -->
-    <div id="plan-modal-btn" onclick="openPlanModal()" class="bg-[#005bc4] text-white py-3 px-1.5 rounded-l-sm flex flex-col items-center justify-center gap-3 cursor-pointer hover:bg-[#004a9e] transition-colors shadow-lg border border-r-0 border-white/20">
-      <span class="text-[13px] font-medium tracking-wide whitespace-nowrap" style="writing-mode: vertical-rl; transform: rotate(180deg);">
+    <div id="plan-modal-btn" onclick="openPlanModal()"
+      class="bg-white text-[#005bc4] py-3 px-1.5 rounded-l-sm flex flex-col items-center justify-center gap-3 cursor-pointer hover:bg-[#004a9e] transition-colors shadow-lg border border-r-0 border-white/20">
+      <span class="text-[13px] font-normal tracking-wide whitespace-nowrap"
+        style="writing-mode: vertical-rl; transform: rotate(180deg);">
         Master Plan
       </span>
-      <svg class="w-5 h-5 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <svg class="w-5 h-5 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round">
         <circle cx="12" cy="12" r="10"></circle>
         <polyline points="8 12 12 16 16 12"></polyline>
         <line x1="12" y1="8" x2="12" y2="16"></line>
@@ -2295,9 +2038,67 @@
 
   </div>
 
-  <!-- SCRIPT FOR TAB SWITCHING, MODAL & AOS INITIALIZATION -->
+  <!-- SIDE MENU OVERLAY -->
+  <div id="sideMenuOverlay" class="fixed inset-0 bg-black/50 backdrop-blur-sm opacity-0 pointer-events-none"
+    style="z-index: 110; transition: opacity 0.3s ease-in-out;" onclick="closeSideMenu()"></div>
+
+  <div id="sideMenu" class="fixed top-0 left-0 w-72 h-full bg-white shadow-2xl flex flex-col overflow-y-auto"
+    style="z-index: 120; transform: translateX(-100%); transition: transform 0.3s ease-in-out;">
+
+    <div class="flex items-center justify-between p-5 border-b border-slate-200">
+      <img src="./assets/images/logo.png" alt="Zuari KinetiX Logo" class="w-28 object-contain" />
+      <button onclick="closeSideMenu()"
+        class="text-slate-500 hover:text-slate-800 bg-slate-100 hover:bg-slate-200 p-2 rounded-full transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <nav class="flex-1 py-4">
+      <ul class="flex flex-col">
+        <li><a href="#home" onclick="closeSideMenu()"
+            class="block px-6 py-3 text-sm font-normal text-slate-700 hover:bg-slate-50 hover:text-[#0052CC] transition-colors border-l-4 border-transparent hover:border-[#0052CC]">Home</a>
+        </li>
+        <li><a href="#plans" onclick="closeSideMenu()"
+            class="block px-6 py-3 text-sm font-normal text-slate-700 hover:bg-slate-50 hover:text-[#0052CC] transition-colors border-l-4 border-transparent hover:border-[#0052CC]">Plans</a>
+        </li>
+        <li><a href="#site-tour" onclick="closeSideMenu()"
+            class="block px-6 py-3 text-sm font-normal text-slate-700 hover:bg-slate-50 hover:text-[#0052CC] transition-colors border-l-4 border-transparent hover:border-[#0052CC]">360
+            Virtual Site Tour</a></li>
+        <li><a href="#connectivity" onclick="closeSideMenu()"
+            class="block px-6 py-3 text-sm font-normal text-slate-700 hover:bg-slate-50 hover:text-[#0052CC] transition-colors border-l-4 border-transparent hover:border-[#0052CC]">Connectivities</a>
+        </li>
+        <li><a href="#amenities" onclick="closeSideMenu()"
+            class="block px-6 py-3 text-sm font-normal text-slate-700 hover:bg-slate-50 hover:text-[#0052CC] transition-colors border-l-4 border-transparent hover:border-[#0052CC]">Amenities</a>
+        </li>
+        <li><a href="#location-advantages" onclick="closeSideMenu()"
+            class="block px-6 py-3 text-sm font-normal text-slate-700 hover:bg-slate-50 hover:text-[#0052CC] transition-colors border-l-4 border-transparent hover:border-[#0052CC]">Location
+            Advantages</a></li>
+        <li><a href="#price-trend" onclick="closeSideMenu()"
+            class="block px-6 py-3 text-sm font-normal text-slate-700 hover:bg-slate-50 hover:text-[#0052CC] transition-colors border-l-4 border-transparent hover:border-[#0052CC]">Price
+            Trend</a></li>
+        <li><a href="#invest" onclick="closeSideMenu()"
+            class="block px-6 py-3 text-sm font-normal text-slate-700 hover:bg-slate-50 hover:text-[#0052CC] transition-colors border-l-4 border-transparent hover:border-[#0052CC]">Invest</a>
+        </li>
+        <li><a href="#gallery" onclick="closeSideMenu()"
+            class="block px-6 py-3 text-sm font-normal text-slate-700 hover:bg-slate-50 hover:text-[#0052CC] transition-colors border-l-4 border-transparent hover:border-[#0052CC]">Project
+            Gallery</a></li>
+        <li><a href="#why-choose-us" onclick="closeSideMenu()"
+            class="block px-6 py-3 text-sm font-normal text-slate-700 hover:bg-slate-50 hover:text-[#0052CC] transition-colors border-l-4 border-transparent hover:border-[#0052CC]">Why
+            Choose Us</a></li>
+        <li><a href="#security" onclick="closeSideMenu()"
+            class="block px-6 py-3 text-sm font-normal text-slate-700 hover:bg-slate-50 hover:text-[#0052CC] transition-colors border-l-4 border-transparent hover:border-[#0052CC]">Security</a>
+        </li>
+        <li><a href="#about-us" onclick="closeSideMenu()"
+            class="block px-6 py-3 text-sm font-normal text-slate-700 hover:bg-slate-50 hover:text-[#0052CC] transition-colors border-l-4 border-transparent hover:border-[#0052CC]">About
+            Us</a></li>
+      </ul>
+    </nav>
+  </div>
+
   <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
-  <script src="./assets/js/app.js" defer></script>
+  <script src="./assets/js/app.js?v=2" defer></script>
 </body>
 
 </html>

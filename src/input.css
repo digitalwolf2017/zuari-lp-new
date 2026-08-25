@@ -24,36 +24,36 @@
 
 
 /* Base state before scrolling into view */
-  .trend-line {
-    stroke-dasharray: 600;
-    stroke-dashoffset: 600;
-    transition: stroke-dashoffset 1.8s cubic-bezier(0.4, 0, 0.2, 1);
-  }
+.trend-line {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  transition: stroke-dashoffset 1.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  .area-path {
-    opacity: 0;
-    transition: opacity 1s ease-out 1s;
-  }
+.area-path {
+  opacity: 0;
+  transition: opacity 1s ease-out 1s;
+}
 
-  .point-group {
-    opacity: 0;
-    transform: scale(0);
-    transform-origin: center;
-    transform-box: fill-box;
-    transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
+.point-group {
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: center;
+  transform-box: fill-box;
+  transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
-  /* Trigger animations when AOS adds the 'aos-animate' class */
-  [data-aos].aos-animate .trend-line {
-    stroke-dashoffset: 0;
-  }
+/* Trigger animations when AOS adds the 'aos-animate' class */
+[data-aos].aos-animate .trend-line {
+  stroke-dashoffset: 0;
+}
 
-  [data-aos].aos-animate .area-path {
-    opacity: 1;
-  }
+[data-aos].aos-animate .area-path {
+  opacity: 1;
+}
 
-  [data-aos].aos-animate .point-group {
-    opacity: 1;
-    transform: scale(1);
-    transition-delay: var(--delay);
-  }
+[data-aos].aos-animate .point-group {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: var(--delay);
+}
