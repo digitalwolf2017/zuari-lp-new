@@ -455,3 +455,44 @@ function closeSideMenu() {
     menu.style.transform = "translateX(-100%)";
   }
 }
+
+// Sticky Header Logic
+const siteHeader = document.getElementById("siteHeader");
+const siteHeaderLogo = document.getElementById("siteHeaderLogo");
+const stickyClasses = [
+  "fixed",
+  "top-0",
+  "left-0",
+  "w-full",
+  "z-[105]",
+  "bg-white/85",
+  "backdrop-blur-md",
+  "shadow-md",
+  "py-3",
+  "px-4",
+  "sm:px-6",
+  "lg:px-12",
+];
+const logoDefaultClasses = ["w-32", "sm:w-48", "md:w-56"];
+const logoStickyClasses = ["w-24", "sm:w-28", "md:w-40"];
+
+function toggleStickyHeader() {
+  if (!siteHeader) return;
+
+  if (window.scrollY > 80) {
+    siteHeader.classList.add(...stickyClasses);
+    if (siteHeaderLogo) {
+      siteHeaderLogo.classList.remove(...logoDefaultClasses);
+      siteHeaderLogo.classList.add(...logoStickyClasses);
+    }
+  } else {
+    siteHeader.classList.remove(...stickyClasses);
+    if (siteHeaderLogo) {
+      siteHeaderLogo.classList.add(...logoDefaultClasses);
+      siteHeaderLogo.classList.remove(...logoStickyClasses);
+    }
+  }
+}
+
+window.addEventListener("scroll", toggleStickyHeader, { passive: true });
+toggleStickyHeader();
