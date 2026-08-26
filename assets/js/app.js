@@ -182,13 +182,13 @@ function selectAmenity(key, element) {
   if (!data) return;
 
   // Reset active rings for all amenity tabs
-  document.querySelectorAll(".amenity-tab .p-1").forEach((box) => {
-    box.classList.remove("ring-2", "ring-[#0066CC]");
+  document.querySelectorAll(".amenity-tab > div").forEach((box) => {
+    box.classList.remove("ring-2", "ring-[#0066CC]", "md:ring-2", "md:ring-[#0066CC]");
     box.classList.add("ring-1", "ring-slate-200");
   });
 
   // Add active blue ring to selected tab
-  const selectedBox = element.querySelector(".p-1");
+  const selectedBox = element.querySelector("div");
   if (selectedBox) {
     selectedBox.classList.remove("ring-1", "ring-slate-200");
     selectedBox.classList.add("ring-2", "ring-[#0066CC]");
@@ -198,12 +198,14 @@ function selectAmenity(key, element) {
   const imgEl = document.getElementById("amenity-large-preview");
   const titleEl = document.getElementById("hotspot-title");
 
-  imgEl.style.opacity = "0.3";
-  setTimeout(() => {
-    imgEl.src = data.img;
-    titleEl.innerText = data.title;
-    imgEl.style.opacity = "1";
-  }, 150);
+  if (imgEl) {
+    imgEl.style.opacity = "0.3";
+    setTimeout(() => {
+      imgEl.src = data.img;
+      if (titleEl) titleEl.innerText = data.title;
+      imgEl.style.opacity = "1";
+    }, 150);
+  }
 }
 
 // Dynamic Tab Content Data
@@ -323,11 +325,11 @@ function renderLocationCards(categoryKey) {
 function switchLocationTab(categoryKey, btnElement) {
   document.querySelectorAll(".loc-tab").forEach((btn) => {
     btn.className =
-      "loc-tab px-4 sm:px-6 py-2.5 text-sm sm:text-sm font-normal rounded-lg transition-all duration-300 bg-slate-200 hover:bg-slate-300 text-slate-700";
+      "loc-tab w-full sm:w-auto px-2 sm:px-6 py-2.5 text-xs sm:text-sm font-normal rounded-lg transition-all duration-300 bg-slate-200 hover:bg-slate-300 text-slate-700 text-center";
   });
 
   btnElement.className =
-    "loc-tab active-loc-tab px-4 sm:px-6 py-2.5 text-sm sm:text-sm font-normal rounded-lg transition-all duration-300 bg-[#0066CC] text-white shadow-md";
+    "loc-tab active-loc-tab w-full sm:w-auto px-2 sm:px-6 py-2.5 text-xs sm:text-sm font-normal rounded-lg transition-all duration-300 bg-[#0066CC] text-white shadow-md text-center";
 
   renderLocationCards(categoryKey);
 }
@@ -345,8 +347,8 @@ function switchGalleryTab(tabNum) {
   // Remove active class from all gallery buttons
   const buttons = document.querySelectorAll(".gallery-tab-btn");
   buttons.forEach((btn) => {
-    btn.className =
-      "gallery-tab-btn px-6 py-2.5 text-sm sm:text-sm font-normal rounded-lg transition-all duration-300 bg-slate-200 hover:bg-slate-300 text-slate-700";
+    btn.classList.remove("active", "bg-[#0066CC]", "text-white", "shadow-md");
+    btn.classList.add("bg-slate-200", "hover:bg-slate-300", "text-slate-700");
   });
 
   // Show target content pane
@@ -358,13 +360,15 @@ function switchGalleryTab(tabNum) {
   // Activate active target button
   const targetBtn = document.getElementById(`galleryTabBtn${tabNum}`);
   if (targetBtn) {
-    targetBtn.className =
-      "gallery-tab-btn active px-6 py-2.5 text-sm sm:text-sm font-normal rounded-lg transition-all duration-300 bg-[#0066CC] text-white shadow-md";
+    targetBtn.classList.remove("bg-slate-200", "hover:bg-slate-300", "text-slate-700");
+    targetBtn.classList.add("active", "bg-[#0066CC]", "text-white", "shadow-md");
   }
 
   // Refresh AOS on tab change
   setTimeout(() => {
-    AOS.refresh();
+    if (typeof AOS !== "undefined") {
+      AOS.refresh();
+    }
   }, 50);
 }
 
@@ -384,17 +388,17 @@ function switchTab(tabNum) {
     tab2Content.classList.add("hidden");
 
     tab1Btn.className =
-      "tab-btn active flex items-center gap-2.5 px-6 py-3.5 rounded-lg font-normal text-sm sm:text-base transition-all duration-300 shadow-md bg-sky-600 text-white hover:bg-sky-700 hover:shadow-lg focus:outline-none";
+      "tab-btn active flex items-center justify-center gap-2.5 w-64 sm:w-auto px-6 py-3.5 rounded-lg font-normal text-sm sm:text-base transition-all duration-300 shadow-md bg-sky-600 text-white hover:bg-sky-700 hover:shadow-lg focus:outline-none";
     tab2Btn.className =
-      "tab-btn flex items-center gap-2.5 px-6 py-3.5 rounded-lg font-normal text-sm sm:text-base transition-all duration-300 bg-slate-200/80 text-slate-700 hover:bg-slate-300 hover:text-slate-900 hover:shadow-md focus:outline-none";
+      "tab-btn flex items-center justify-center gap-2.5 w-64 sm:w-auto px-6 py-3.5 rounded-lg font-normal text-sm sm:text-base transition-all duration-300 bg-slate-200/80 text-slate-700 hover:bg-slate-300 hover:text-slate-900 hover:shadow-md focus:outline-none";
   } else {
     tab2Content.classList.remove("hidden");
     tab1Content.classList.add("hidden");
 
     tab2Btn.className =
-      "tab-btn active flex items-center gap-2.5 px-6 py-3.5 rounded-lg font-normal text-sm sm:text-base transition-all duration-300 shadow-md bg-sky-600 text-white hover:bg-sky-700 hover:shadow-lg focus:outline-none";
+      "tab-btn active flex items-center justify-center gap-2.5 w-64 sm:w-auto px-6 py-3.5 rounded-lg font-normal text-sm sm:text-base transition-all duration-300 shadow-md bg-sky-600 text-white hover:bg-sky-700 hover:shadow-lg focus:outline-none";
     tab1Btn.className =
-      "tab-btn flex items-center gap-2.5 px-6 py-3.5 rounded-lg font-normal text-sm sm:text-base transition-all duration-300 bg-slate-200/80 text-slate-700 hover:bg-slate-300 hover:text-slate-900 hover:shadow-md focus:outline-none";
+      "tab-btn flex items-center justify-center gap-2.5 w-64 sm:w-auto px-6 py-3.5 rounded-lg font-normal text-sm sm:text-base transition-all duration-300 bg-slate-200/80 text-slate-700 hover:bg-slate-300 hover:text-slate-900 hover:shadow-md focus:outline-none";
   }
 }
 
@@ -496,3 +500,9 @@ function toggleStickyHeader() {
 
 window.addEventListener("scroll", toggleStickyHeader, { passive: true });
 toggleStickyHeader();
+
+// Dynamic Year in Footer
+const currentYearEl = document.getElementById("current-year");
+if (currentYearEl) {
+  currentYearEl.textContent = new Date().getFullYear();
+}
