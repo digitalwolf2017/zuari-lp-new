@@ -512,3 +512,145 @@ const currentYearEl = document.getElementById("current-year");
 if (currentYearEl) {
   currentYearEl.textContent = new Date().getFullYear();
 }
+
+// ============================================
+// AMENITIES LIGHTBOX FUNCTIONALITY
+// ============================================
+
+const amenityLightboxData = [
+  { key: 'adventure', title: 'Adventure Play Zone', img: './assets/images/adventure.webp' },
+  { key: 'archery', title: 'Archery & Precision Zone', img: './assets/images/archery.webp' },
+  { key: 'basketball', title: 'Basketball Court', img: './assets/images/basketball-court.webp' },
+  { key: 'cafe', title: 'Clubhouse Cafe & Community Lounge', img: './assets/images/cafe.webp' },
+  { key: 'foosball', title: 'Foosball & Indoor Games Deck', img: './assets/images/foosball.webp' },
+  { key: 'forest', title: 'Miyawaki Forest Zone', img: './assets/images/miyawaki-forest.jpg.webp' },
+  { key: 'climbing', title: 'Rock Climbing Wall', img: './assets/images/rock-climbing.webp' },
+  { key: 'senior', title: 'Senior Citizens Relaxation Zone', img: './assets/images/senior-citizen-zone.webp' },
+  { key: 'swimming', title: 'Temperature Controlled Swimming Pool', img: './assets/images/swimming-pool.webp' },
+];
+
+let lightboxState = {
+  isOpen: false,
+  currentIndex: 0,
+};
+
+function openAmenityLightbox(index) {
+  const lightbox = document.getElementById('amenityLightbox');
+  const lightboxImage = document.getElementById('lightboxImage');
+  const lightboxLoader = document.getElementById('lightboxLoader');
+  const counter = document.getElementById('lightboxCounter');
+  const counterDesktop = document.getElementById('lightboxCounterDesktop');
+
+  if (!lightbox || index < 0 || index >= amenityLightboxData.length) return;
+
+  lightboxState.isOpen = true;
+  lightboxState.currentIndex = index;
+
+  const data = amenityLightboxData[index];
+
+  lightboxImage.style.opacity = '0';
+  lightboxLoader.classList.remove('hidden');
+
+  const img = new Image();
+  img.onload = () => {
+    lightboxImage.src = data.img;
+    lightboxImage.alt = data.title;
+    lightboxLoader.classList.add('hidden');
+    lightboxImage.style.opacity = '1';
+  };
+  img.onerror = () => {
+    lightboxLoader.classList.add('hidden');
+    lightboxImage.style.opacity = '1';
+  };
+  img.src = data.img;
+
+  updateLightboxCounter();
+
+  lightbox.classList.remove('opacity-0', 'pointer-events-none');
+  lightbox.classList.add('opacity-100', 'pointer-events-auto');
+  lightbox.querySelector('div').classList.remove('scale-95');
+  lightbox.querySelector('div').classList.add('scale-100');
+
+  document.body.style.overflow = 'hidden';
+
+  document.addEventListener('keydown', handleLightboxKeydown);
+}
+
+function closeAmenityLightbox() {
+  const lightbox = document.getElementById('amenityLightbox');
+  if (!lightbox) return;
+
+  lightboxState.isOpen = false;
+
+  lightbox.classList.add('opacity-0', 'pointer-events-none');
+  lightbox.classList.remove('opacity-100', 'pointer-events-auto');
+  lightbox.querySelector('div').classList.add('scale-95');
+  lightbox.querySelector('div').classList.remove('scale-100');
+
+  document.body.style.overflow = '';
+
+  document.removeEventListener('keydown', handleLightboxKeydown);
+}
+
+function navigateAmenityLightbox(direction) {
+  if (!lightboxState.isOpen) return;
+
+  let newIndex = lightboxState.currentIndex + direction;
+
+  if (newIndex < 0) newIndex = amenityLightboxData.length - 1;
+  if (newIndex >= amenityLightboxData.length) newIndex = 0;
+
+  openAmenityLightbox(newIndex);
+}
+
+function updateLightboxCounter() {
+  const counter = document.getElementById('lightboxCounter');
+  const counterDesktop = document.getElementById('lightboxCounterDesktop');
+  const text = `${lightboxState.currentIndex + 1} / ${amenityLightboxData.length}`;
+
+  if (counter) counter.textContent = text;
+  if (counterDesktop) counterDesktop.textContent = text;
+}
+
+function handleLightboxKeydown(e) {
+  if (!lightboxState.isOpen) return;
+
+  switch (e.key) {
+    case 'Escape':
+      closeAmenityLightbox();
+      break;
+    case 'ArrowLeft':
+      navigateAmenityLightbox(-1);
+      break;
+    case 'ArrowRight':
+      navigateAmenityLightbox(1);
+      break;
+  }
+}
+
+document.getElementById('amenityLightbox').addEventListener('click', function (e) {
+  if (e.target === this) {
+    closeAmenityLightbox();
+  }
+});
+
+function selectAmenity(key, element) {
+  const data = amenityData[key];
+  if (!data) return;
+
+  document.querySelectorAll(".amenity-tab > div").forEach((box) => {
+    box.classList.remove("ring-2", "ring-[#0066CC]", "md:ring-2", "md:ring-[#0066CC]");
+    box.classList.add("ring-1", "ring-slate-200");
+  });
+
+  const selectedBox = element.querySelector("div");
+  if (selectedBox) {
+    selectedBox.classList.remove("ring-1", "ring-slate-200");
+    selectedBox.classList.add("ring-2", "ring-[#0066CC]");
+  }
+
+  const index = amenityLightboxData.findIndex(item => item.key === key);
+  if (index !== -1) {
+    openAmenityLightbox(index);
+  }
+}
