@@ -160,19 +160,19 @@ const amenityData = {
   },
   forest: {
     title: "Miyawaki Forest Zone",
-    img: "./assets/images/miyawaki-forest.jpg.jpeg",
+    img: "./assets/images/miyawaki-forest.jpg.webp",
   },
   climbing: {
     title: "Rock Climbing Wall",
-    img: "./assets/images/rock-climbing.jpg",
+    img: "./assets/images/rock-climbing.webp",
   },
   senior: {
     title: "Senior Citizens Relaxation Zone",
-    img: "./assets/images/senior-citizen-zone.jpg",
+    img: "./assets/images/senior-citizen-zone.webp",
   },
   swimming: {
     title: "Temperature Controlled Swimming Pool",
-    img: "./assets/images/swimming-pool.jpg",
+    img: "./assets/images/swimming-pool.webp",
   },
 };
 
@@ -210,78 +210,84 @@ function selectAmenity(key, element) {
 
 // Dynamic Tab Content Data
 const locationAdvantageData = {
-  hospital: [
-    { time: "9 min", title: "Dhanvantari Ayurvedic Clinic" },
-    { time: "10 min", title: "Ayurvedic Hospital At Madhure" },
+hospital: [
+    { time: "9 min", title: "Dhanvantari Ayurvedic Clinic" , href: "https://maps.app.goo.gl/V8RuCu75nUbehi6e8"},
+    { time: "10 min", title: "Ayurvedic Hospital At Madhure", href: "https://maps.app.goo.gl/x12zqd9SdwA5Hj4Z7" },
     {
       time: "12 min",
-      title: "Sri Paripoorna Sanathana Ayurveda Medical College",
+      title: "Sri Paripoorna Sanathana Ayurveda Medical College", href: "https://maps.app.goo.gl/nAxV5Y3EvyZguDGRA"
     },
-    { time: "19 min", title: "Maruthi Medicals And General Store" },
-    { time: "23 min", title: "VCNR Hospital" },
-    { time: "24 min", title: "Aasare Hospital" },
-    { time: "25 min", title: "Amrutha Super Speciality Hospital" },
+    { time: "19 min", title: "Maruthi Medicals And General Store", href: "https://maps.app.goo.gl/MpZsbYyZ32DkMtRR9"  },
+    { time: "23 min", title: "VCNR Hospital", href: "https://maps.app.goo.gl/PGSLNVYwJhjXjcog8" },
+    { time: "24 min", title: "Aasare Hospital", href: "https://maps.app.goo.gl/ay1NtTvhgoweun3r6" },
+    { time: "25 min", title: "Amrutha Super Speciality Hospital", href: "https://maps.app.goo.gl/wGM3exbE22fgf1Kw9" },
     {
       time: "27 min",
-      title: "Rosy Royal Homoeopathic Medical College & Hospital",
+      title: "Rosy Royal Homoeopathic Medical College & Hospital",href: "https://maps.app.goo.gl/1sdYGdZ4ZrVgU7AWA"
     },
   ],
-  companies: [
-    { time: "1 min", title: "Britannia Industries Ltd" },
-    { time: "4 min", title: "V-xpress" },
+
+companies: [
+    { time: "1 min", title: "Britannia Industries Ltd", href: "https://maps.app.goo.gl/yfk42mT2uVVFcx5e8" },
+    { time: "4 min", title: "V-xpress", href: "https://maps.app.goo.gl/QJndZNQYkCJkDzvT8" },
     {
       time: "5 min",
-      title: "SR SEATIING PRIVATE LIMIITED - MANUFACTURING UNIT",
+      title: "SR SEATIING PRIVATE LIMIITED - MANUFACTURING UNIT", href: "https://maps.app.goo.gl/skLNmDhT4VD78qhR8"
     },
-    { time: "16 min", title: "Godrej & Boyce Mfg Co LTD" },
-    { time: "22 min", title: "ABB India Limited" },
-    { time: "24 min", title: "Denso Kirloskar Ind PVT LTD" },
-    { time: "25 min", title: "Volvo Constructions Equipment" },
-    { time: "40 min", title: "Himalaya Campus" },
+    { time: "16 min", title: "Godrej & Boyce Mfg Co LTD",href: "https://maps.app.goo.gl/boaQXCXyH92ESCmw5" },
+    { time: "22 min", title: "ABB India Limited", href: "https://maps.app.goo.gl/k4Yj2tC1c8vvq28n7" },
+    { time: "24 min", title: "Denso Kirloskar Ind PVT LTD", href: "https://maps.app.goo.gl/uE1i5JWUjX7exf6U8" },
+    { time: "25 min", title: "Volvo Constructions Equipment", href: "https://maps.app.goo.gl/VXpkrZ8n3GXS8q2Q7" },
+    { time: "40 min", title: "Himalaya Campus", href: "https://maps.app.goo.gl/oAnRbnD73oMYaYkv5" },
   ],
-  connectivity: [
-    { time: "0 min", title: "Proposed IRR" },
-    { time: "12 min", title: "Kannamangala GateBus Stand" },
-    { time: "19 min", title: "Bhairanayakanahalli Train Station" },
-    { time: "25 min", title: "Nelamangala Town" },
-    { time: "31 min", title: "KWIN City" },
-    { time: "37 min", title: "Madavara Metro Station," },
-    { time: "45 min", title: "Airport" },
+
+connectivity: [
+    { time: "0 min", title: "Proposed IRR", href: "https://maps.app.goo.gl/r7jhgzXyBxFjtUrXA" },
+    { time: "12 min", title: "Kannamangala GateBus Stand", href: "https://maps.app.goo.gl/i3nwr8fCs31aMmn58" },
+    { time: "19 min", title: "Bhairanayakanahalli Train Station", href: "https://maps.app.goo.gl/EfnSXZ8dgDcaVdfp8" },
+    { time: "25 min", title: "Nelamangala Town", href: "https://maps.app.goo.gl/xSGwSdugnkzcJ69e9"  },
+    { time: "31 min", title: "KWIN City", href: "https://maps.app.goo.gl/TEhYrDsZ37assD2U9" },
+    { time: "37 min", title: "Madavara Metro Station,", href: "https://maps.app.goo.gl/YM7tYABE8xLeKqEb8" },
+    { time: "45 min", title: "Airport", href: "https://maps.app.goo.gl/yrny9cmQhddJeqXf6" },
   ],
-  schools: [
-    { time: "5 min", title: "SHIKSHANA GROUP OF INSTITUTIONS" },
-    { time: "6 min", title: "Shree Maatha International Public School" },
-    { time: "6 min", title: "Kristu Jayanti CMI Public School" },
+
+schools: [
+    { time: "5 min", title: "SHIKSHANA GROUP OF INSTITUTIONS", href: "https://maps.app.goo.gl/Hrbdt5TqAyPEigSd9" },
+    { time: "6 min", title: "Shree Maatha International Public School", href: "https://maps.app.goo.gl/49ZPi3k2nRugAJJd8" },
+    { time: "6 min", title: "Kristu Jayanti CMI Public School", href: "https://maps.app.goo.gl/kLrrHo2uDvKCoeDT6" },
     {
       time: "16 min",
-      title: "Kittur rani chennamma Residential School.(KRCRS)",
+      title: "Kittur rani chennamma Residential School.(KRCRS)", href: "https://maps.app.goo.gl/dfGrexzpYLqpP6uP7"
     },
-    { time: "22 min", title: "Thomas Memorial English High School" },
-    { time: "25 min", title: "New Public School" },
-    { time: "28 min", title: "Kanva Public school" },
-    { time: "30 min", title: "M K V ENGLISH HIGH SCHOOL" },
+    { time: "22 min", title: "Thomas Memorial English High School", href: "https://maps.app.goo.gl/qi8n3UeFVV8y4a6q8" },
+    { time: "25 min", title: "New Public School", href: "https://maps.app.goo.gl/sMjkqwiYXViKh1zKA" },
+    { time: "28 min", title: "Kanva Public school", href: "https://maps.app.goo.gl/s8eJ5DXBAY5icdnRA" },
+    { time: "30 min", title: "M K V ENGLISH HIGH SCHOOL", href: "https://maps.app.goo.gl/YVXssLCH4NYG8kF19" },
   ],
-  colleges: [
+
+colleges: [
     {
       time: "12 min",
       title:
-        "Sri Paripoorna Sanathana Ayurveda Medical College, Hospital & Research Centre",
+        "Sri Paripoorna Sanathana Ayurveda Medical College, Hospital & Research Centre", href: "https://maps.app.goo.gl/nAxV5Y3EvyZguDGRA"
     },
-    { time: "12 min", title: "RAI TECHNOLOGY UNIVERSITY, BENGALURU" },
-    { time: "19 min", title: "Aditya College Of Engineering And Technology" },
+    { time: "12 min", title: "RAI TECHNOLOGY UNIVERSITY, BENGALURU", href: "https://maps.app.goo.gl/Qk7XJScLtHBUbkKi9" },
+    { time: "19 min", title: "Aditya College Of Engineering And Technology", href: "https://maps.app.goo.gl/fvcTcFbtNKdUi1b79" },
     {
       time: "28 min",
-      title: "Rosy Royal Homoeopathic Medical College & Hospital",
+      title: "Rosy Royal Homoeopathic Medical College & Hospital", href:"https://maps.app.goo.gl/1sdYGdZ4ZrVgU7AWA"
     },
   ],
-  recreational: [
-    { time: "4 min", title: "L G Mahal Wedding Hall" },
-    { time: "17 min", title: "CK Ground & Cricket Academy" },
-    { time: "19 min", title: "SLBTC Lake End Cycling Road" },
-    { time: "20 min", title: "Bren Raceway - FIA Grade 2" },
-    { time: "22 min", title: "Avyuktha Multi Sports Arena" },
-    { time: "24 min", title: "Hesaraghatta Lake Viewpoint" },
-    { time: "43 min", title: "Bangalore International Exhibition Centre" },
+
+
+recreational: [
+    { time: "4 min", title: "L G Mahal Wedding Hall", href: "https://maps.app.goo.gl/meQiQfRNYJprA3Tp6" },
+    { time: "17 min", title: "CK Ground & Cricket Academy", href: "https://maps.app.goo.gl/SaMmYRKSxkwBFcKD7" },
+    { time: "19 min", title: "SLBTC Lake End Cycling Road", href: "https://maps.app.goo.gl/UHMeRHiBFLyZgafs6" },
+    { time: "20 min", title: "Bren Raceway - FIA Grade 2", href: "https://maps.app.goo.gl/Nd7A4qJEtQJ19MeJ8" },
+    { time: "22 min", title: "Avyuktha Multi Sports Arena", href: "https://maps.app.goo.gl/zyEAJWF5gaBnQWjv7" },
+    { time: "24 min", title: "Hesaraghatta Lake Viewpoint", href: "https://maps.app.goo.gl/SUhETh72ziNFmxb38" },
+    { time: "43 min", title: "Bangalore International Exhibition Centre", href: "https://maps.app.goo.gl/ogS8YvRcTKHAzGqH6" },
   ],
 };
 
@@ -296,7 +302,7 @@ function renderLocationCards(categoryKey) {
     grid.innerHTML = items
       .map((item) => {
         return `
-          <div class="group bg-white/80 backdrop-blur-sm border border-slate-200/80 rounded-xl p-3 sm:p-4 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-[#0066CC] transition-all duration-300 flex flex-col justify-between cursor-pointer relative overflow-hidden">
+          <a href="${item.href || '#'}" target="_blank" rel="noopener noreferrer" class="group bg-white/80 backdrop-blur-sm border border-slate-200/80 rounded-xl p-3 sm:p-4 shadow-sm hover:shadow-xl hover:-translate-y-1 hover:border-[#0066CC] transition-all duration-300 flex flex-col justify-between cursor-pointer relative overflow-hidden block">
             <!-- Hover accent bar -->
             <div class="absolute left-0 top-0 h-full w-1 bg-[#0066CC] scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-bottom rounded-l-2xl"></div>
             <div>
@@ -312,7 +318,7 @@ function renderLocationCards(categoryKey) {
                 ${item.title}
               </h3>
             </div>
-          </div>
+          </a>
         `;
       })
       .join("");

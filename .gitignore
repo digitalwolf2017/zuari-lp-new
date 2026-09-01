@@ -1,3 +1,8 @@
 __MACOSX
 node_modules/
 .vscode
+video.mp4
+zuari-kinetix-walkthrough-final.mp4
+*.zip
+*.php
+logs/
