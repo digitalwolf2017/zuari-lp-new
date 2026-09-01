@@ -654,3 +654,190 @@ function selectAmenity(key, element) {
     openAmenityLightbox(index);
   }
 }
+
+// ============================================
+// PROJECT GALLERY LIGHTBOX FUNCTIONALITY
+// ============================================
+
+const galleryLightboxData = {
+  1: [
+    { title: 'Mini Football Turf', img: './assets/images/zuari-gallry/football-inr.webp' },
+    { title: 'Pickleball Court', img: './assets/images/zuari-gallry/pikelball.webp' },
+    { title: 'Half Cricket Turf', img: './assets/images/zuari-gallry/play-5.webp' },
+    { title: 'Rock Climbing', img: './assets/images/zuari-gallry/play-3.webp' },
+    { title: 'Archery Range', img: './assets/images/zuari-gallry/play-2.webp' },
+    { title: 'Basketball Court', img: './assets/images/zuari-gallry/play-4.webp' },
+    { title: 'Obstacle Course', img: './assets/images/zuari-gallry/play-1.webp' },
+  ],
+  2: [
+    { title: 'Miyawaki Forest', img: './assets/images/zuari-gallry/wellness-8.webp' },
+    { title: 'Openair Gym', img: './assets/images/zuari-gallry/wellness-7.webp' },
+    { title: 'Senior Citizen Park', img: './assets/images/zuari-gallry/wellness-4.webp' },
+    { title: 'Yoga Deck', img: './assets/images/zuari-gallry/wellness-1.webp' },
+    { title: 'Jogging Track', img: './assets/images/zuari-gallry/wellness-6.webp' },
+    { title: 'Pet Zone', img: './assets/images/zuari-gallry/wellness-2.webp' },
+    { title: 'Relaxation Zone', img: './assets/images/zuari-gallry/Senior-citizen2.webp' },
+    { title: 'Sitting Zone', img: './assets/images/zuari-gallry/wellness-10.webp' },
+  ],
+  3: [
+    { title: 'Cafe', img: './assets/images/zuari-gallry/club-1.webp' },
+    { title: 'Swimming Pool', img: './assets/images/zuari-gallry/club-2.webp' },
+    { title: 'Carrom', img: './assets/images/zuari-gallry/club-3.webp' },
+    { title: 'Aerobics and Zumba Studio', img: './assets/images/zuari-gallry/club-4.webp' },
+    { title: 'Foosball Table', img: './assets/images/zuari-gallry/club-5.webp' },
+    { title: 'Gymnasium', img: './assets/images/zuari-gallry/club-6.webp' },
+    { title: 'Live Kitchen', img: './assets/images/zuari-gallry/club-7.webp' },
+    { title: 'Live Screening', img: './assets/images/zuari-gallry/club-8.webp' },
+  ],
+  4: [
+    { title: 'Landscape View 1', img: './assets/images/zuari-gallry/Landscape-1.webp' },
+    { title: 'Landscape View 2', img: './assets/images/zuari-gallry/Landscape-6.webp' },
+    { title: 'Landscape View 3', img: './assets/images/zuari-gallry/Landscape-3.webp' },
+    { title: 'Landscape View 4', img: './assets/images/zuari-gallry/Landscape-4.webp' },
+    { title: 'Landscape View 5', img: './assets/images/zuari-gallry/Landscape-5.webp' },
+    { title: 'Landscape View 6', img: './assets/images/zuari-gallry/Landscape-2.webp' },
+    { title: 'Landscape View 7', img: './assets/images/zuari-gallry/Landscape-7.webp' },
+    { title: 'Landscape View 8', img: './assets/images/zuari-gallry/Landscape-8.webp' },
+  ],
+  5: [
+    { title: 'Infrastructure View 1', img: './assets/images/zuari-gallry/infrastructure-1.webp' },
+    { title: 'Infrastructure View 2', img: './assets/images/zuari-gallry/infrastructure-2.webp' },
+    { title: 'Infrastructure View 3', img: './assets/images/zuari-gallry/infrastructure-3.webp' },
+    { title: 'Infrastructure View 4', img: './assets/images/zuari-gallry/infrastructure-4.webp' },
+    { title: 'Infrastructure View 5', img: './assets/images/zuari-gallry/infrastructure-8.webp' },
+    { title: 'Infrastructure View 6', img: './assets/images/zuari-gallry/infrastructure-6.webp' },
+    { title: 'Infrastructure View 7', img: './assets/images/zuari-gallry/infrastructure-5.webp' },
+    { title: 'Infrastructure View 8', img: './assets/images/zuari-gallry/infrastructure-7.webp' },
+  ],
+};
+
+let galleryLightboxState = {
+  isOpen: false,
+  currentTab: 1,
+  currentIndex: 0,
+};
+
+function openGalleryLightbox(tabNum, index) {
+  const lightbox = document.getElementById('amenityLightbox');
+  const lightboxImage = document.getElementById('lightboxImage');
+  const lightboxLoader = document.getElementById('lightboxLoader');
+  const counter = document.getElementById('lightboxCounter');
+  const counterDesktop = document.getElementById('lightboxCounterDesktop');
+
+  const tabData = galleryLightboxData[tabNum];
+  if (!lightbox || !tabData || index < 0 || index >= tabData.length) return;
+
+  galleryLightboxState.isOpen = true;
+  galleryLightboxState.currentTab = tabNum;
+  galleryLightboxState.currentIndex = index;
+
+  const data = tabData[index];
+
+  lightboxImage.style.opacity = '0';
+  lightboxLoader.classList.remove('hidden');
+
+  const img = new Image();
+  img.onload = () => {
+    lightboxImage.src = data.img;
+    lightboxImage.alt = data.title;
+    lightboxLoader.classList.add('hidden');
+    lightboxImage.style.opacity = '1';
+  };
+  img.onerror = () => {
+    lightboxLoader.classList.add('hidden');
+    lightboxImage.style.opacity = '1';
+  };
+  img.src = data.img;
+
+  updateGalleryLightboxCounter();
+
+  lightbox.classList.remove('opacity-0', 'pointer-events-none');
+  lightbox.classList.add('opacity-100', 'pointer-events-auto');
+  lightbox.querySelector('div').classList.remove('scale-95');
+  lightbox.querySelector('div').classList.add('scale-100');
+
+  document.body.style.overflow = 'hidden';
+
+  document.addEventListener('keydown', handleGalleryLightboxKeydown);
+}
+
+function closeGalleryLightbox() {
+  const lightbox = document.getElementById('amenityLightbox');
+  if (!lightbox) return;
+
+  galleryLightboxState.isOpen = false;
+
+  lightbox.classList.add('opacity-0', 'pointer-events-none');
+  lightbox.classList.remove('opacity-100', 'pointer-events-auto');
+  lightbox.querySelector('div').classList.add('scale-95');
+  lightbox.querySelector('div').classList.remove('scale-100');
+
+  document.body.style.overflow = '';
+
+  document.removeEventListener('keydown', handleGalleryLightboxKeydown);
+}
+
+function navigateGalleryLightbox(direction) {
+  if (!galleryLightboxState.isOpen) return;
+
+  const tabData = galleryLightboxData[galleryLightboxState.currentTab];
+  let newIndex = galleryLightboxState.currentIndex + direction;
+
+  if (newIndex < 0) newIndex = tabData.length - 1;
+  if (newIndex >= tabData.length) newIndex = 0;
+
+  openGalleryLightbox(galleryLightboxState.currentTab, newIndex);
+}
+
+function updateGalleryLightboxCounter() {
+  const counter = document.getElementById('lightboxCounter');
+  const counterDesktop = document.getElementById('lightboxCounterDesktop');
+  const tabData = galleryLightboxData[galleryLightboxState.currentTab];
+  const text = `${galleryLightboxState.currentIndex + 1} / ${tabData.length}`;
+
+  if (counter) counter.textContent = text;
+  if (counterDesktop) counterDesktop.textContent = text;
+}
+
+function handleGalleryLightboxKeydown(e) {
+  if (!galleryLightboxState.isOpen) return;
+
+  switch (e.key) {
+    case 'Escape':
+      closeGalleryLightbox();
+      break;
+    case 'ArrowLeft':
+      navigateGalleryLightbox(-1);
+      break;
+    case 'ArrowRight':
+      navigateGalleryLightbox(1);
+      break;
+  }
+}
+
+// ============================================
+// UNIFIED LIGHTBOX CONTROLS (routes to active lightbox)
+// ============================================
+
+function navigateLightbox(direction) {
+  if (lightboxState.isOpen) {
+    navigateAmenityLightbox(direction);
+  } else if (galleryLightboxState.isOpen) {
+    navigateGalleryLightbox(direction);
+  }
+}
+
+function closeLightbox() {
+  if (lightboxState.isOpen) {
+    closeAmenityLightbox();
+  } else if (galleryLightboxState.isOpen) {
+    closeGalleryLightbox();
+  }
+}
+
+// Update overlay click handler to use unified close
+document.getElementById('amenityLightbox').addEventListener('click', function (e) {
+  if (e.target === this) {
+    closeLightbox();
+  }
+});
